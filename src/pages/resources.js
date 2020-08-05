@@ -25,7 +25,7 @@ export default () => (
         maxWidth: ["100%", "65%"],
         mb: 3,
         mt: 3,
-        color: "topHeading"
+        color: "green"
       }}
     >
       Want to get involved in combating COVID-19?

@@ -23,8 +23,9 @@ export const palette = {
     default: {
       background: "#F8F8F8",
       secondaryBackground: "#F8F8F8",
-      topHeading: "#00E4BF",
-      greyHeading: "#4A4A4A",
+      green: "#00E4BF",
+      grey: "#4A4A4A",
+      blue: "#388CF7",
       primary: "#000000",
       secondary: "rgba(0, 0, 0, 0.7)",
       tertiary: "rgba(0, 0, 0, 0.5)",
