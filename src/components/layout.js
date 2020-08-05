@@ -79,7 +79,7 @@ export const Header = () => {
           <NavLink>Podcasts</NavLink>
         </Link>
         <NavLink>
-          <a href="https://medium.com/coronavirus-visualization-team" target="_blank" rel="noopener noreferrer" style={{color: 'white', textDecoration: 'none'}}> 
+          <a href="https://medium.com/coronavirus-visualization-team" target="_blank" rel="noopener noreferrer" style={{color: "#4A4A4A", textDecoration: 'none'}}> 
           Blog
           </a>
         </NavLink>
@@ -93,7 +93,7 @@ export const Header = () => {
           <NavLink>Resources</NavLink>
         </Link>
 
-        <Box sx={{
+        {/* <Box sx={{
           width: '35px',
           height: '35px',
 
@@ -120,7 +120,7 @@ export const Header = () => {
             }}
             src={colorMode === "dark" ? Moon : Sun}
           />
-        </Box>
+        </Box> */}
       </div>
       <div sx={{display: 'none',
                 '@media screen and (max-width: 800px)': {
@@ -184,7 +184,7 @@ export const Header = () => {
           <NavLink onClick={() => toggleShow(!show)} sx={{mb: 2}}>Podcasts</NavLink>
         </Link>
         <NavLink onClick={() => toggleShow(!show)} sx={{mb: 2}}>
-          <a href="https://medium.com/coronavirus-visualization-team" target="_blank" rel="noopener noreferrer" style={{color: 'white', textDecoration: 'none'}}>
+          <a href="https://medium.com/coronavirus-visualization-team" target="_blank" rel="noopener noreferrer" style={{color: "#4A4A4A", textDecoration: 'none'}}>
           Blog
           </a>
         </NavLink>
@@ -198,7 +198,7 @@ export const Header = () => {
           <NavLink onClick={() => toggleShow(!show)} sx={{mb: 2}}>Resources</NavLink>
         </Link>
 
-        <Box sx={{
+        {/* <Box sx={{
           width: '35px',
           height: '35px',
 
@@ -225,7 +225,7 @@ export const Header = () => {
             }}
             src={colorMode === "dark" ? Moon : Sun}
           />
-        </Box>
+        </Box> */}
       </div>
 
 
