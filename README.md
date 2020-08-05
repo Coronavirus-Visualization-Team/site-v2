@@ -1,8 +1,8 @@
 # CVT Official Landing Page
-This is the official landing page for CVT! This is worked on by the website team of CVT.
+This is the NEW official landing page for CVT! This is worked on by the website team of CVT.
 
 ## Important links
-- GitHub respository: https://github.com/Coronavirus-Visualization-Team/site
+- GitHub respository: https://github.com/Coronavirus-Visualization-Team/site-v2
 - Currently deployed website: https://www.understandcovid.org/
 
 ## Current members
