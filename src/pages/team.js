@@ -106,7 +106,7 @@ const TeamPage = (props) => {
           })}
       </Grid>
 
-      <Text sx={ { variant: "styles.headerText", mb: 4, color: "primary" } }>Erevna Board of Directors</Text>
+      <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Erevna Board of Directors</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
@@ -138,7 +138,7 @@ const TeamPage = (props) => {
       </Grid>
     </Text>
 
-      <Text sx={ { variant: "styles.headerText", mb: 4, color: "primary" } }>Directors</Text>
+      <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Directors</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
@@ -170,7 +170,7 @@ const TeamPage = (props) => {
       </Grid>
     </Text>
 
-    <Text sx={ { variant: "styles.headerText", mb: 4, color: "primary" } }>Project Leads</Text>
+    <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Project Leads</Text>
     <Text
       sx={ { variant: "styles.bodyText", color: "secondary" } }
     >
@@ -202,7 +202,7 @@ const TeamPage = (props) => {
     </Grid>
   </Text>
 
-    <Text sx={ { variant: "styles.headerText", mb: 4, color: "primary" } }>Community Managers</Text>
+    <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Community Managers</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
@@ -235,7 +235,7 @@ const TeamPage = (props) => {
     </Text>
 
 
-      <Text sx={ { variant: "styles.headerText", mb: 4, color: "primary" } }>Members</Text>
+      <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Members</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
