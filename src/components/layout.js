@@ -15,6 +15,7 @@ import {
 import { Link } from "gatsby"
 import favicon from "../../static/assets/favicon.ico"
 import Logo from "./cvtlogo.svg"
+import LogoIconOnly from "../../public/logo_icononly.png";
 import { Helmet } from "react-helmet"
 import TwitterLogo from "./social-icons/Twitter.png"
 import InstagramLogo from "./social-icons/Instagram.png"
@@ -25,14 +26,10 @@ import LinkedInLogo from "./social-icons/LinkedIn.png"
 import SpotifyLogo from "./social-icons/spotify.png"
 import FacebookLogo from "./social-icons/Facebook-Icon-White.png"
 
-import Sun from "../icons/sun.png";
-import Moon from "../icons/moon.png";
-
 import SEO from "../components/seo";
 
 export const Header = () => {
   const [show, toggleShow] = useState(false)
-  const [colorMode, setColorMode] = useColorMode()
 
   return(
     <Box
@@ -54,74 +51,56 @@ export const Header = () => {
       <Link to="/">
         <Image
           sx={{
-            width: ["6em", "10em"],
+            width: ["4em", "6em"],
+            maxWidth: "79px",
             height: "auto",
           }}
-          src={Logo}
+          src={LogoIconOnly}
         />
       </Link>
       <Box sx={{ mx: "auto" }} />
       <div sx = {{
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         flexWrap: 'wrap',
+        flex: "1",
         '@media screen and (max-width: 800px)': {
           display: 'none'
         }
       }}>
+        <div sx={{ ml: 'auto' }} />
         <Link to="/projects">
-          <NavLink>Projects</NavLink>
+          <NavLink sx={{ fontSize: '0.9em', mx: '1.75em' }}>OUR WORK</NavLink>
         </Link>
-        <Link to="/visualizations">
-          <NavLink>Visualizations</NavLink>
-        </Link>
-        <Link to="/podcasts">
-          <NavLink>Podcasts</NavLink>
-        </Link>
-        <NavLink>
-          <a href="https://medium.com/coronavirus-visualization-team" target="_blank" rel="noopener noreferrer" style={{color: 'white', textDecoration: 'none'}}> 
-          Blog
-          </a>
-        </NavLink>
         <Link to="/team">
-          <NavLink>Our Team</NavLink>
-        </Link>
-        <Link to="/join">
-          <NavLink>Join Us</NavLink>
+          <NavLink sx={{ fontSize: '0.9em', mx: '1.75em' }}>OUR TEAM</NavLink>
         </Link>
         <Link to="/resources">
-          <NavLink>Resources</NavLink>
+          <NavLink sx={{ fontSize: '0.9em', mx: '1.75em' }}>RESOURCES</NavLink>
         </Link>
 
-        <Box sx={{
-          width: '35px',
-          height: '35px',
-
-          borderRadius: '50%',
-          border: 'solid 2px transparent',
-
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-
-          cursor: "pointer",
-
-          ml: '32px',
-
-          transition: "ease-in-out 0.12s",
-
-          '&:hover': {border: 'solid 2px white'},
-        }}
-        onClick={() => setColorMode(colorMode === "dark" ? "default" : "dark")}>
-          <Image
-            sx={{
-              width: "60%",
-              height: "auto",
-            }}
-            src={colorMode === "dark" ? Moon : Sun}
-          />
-        </Box>
+        <Link to='/join' sx={{
+          ml: 'auto !important'
+        }}>
+          <Button sx={{
+            background: '#388CF7',
+            borderRadius: '24px',
+            px: '1.85em',
+            pt: '0.85em !important',
+            pb: '0.85em !important',
+            fontSize: '0.9em',
+            fontWeight: '700',
+            cursor: 'pointer',
+            '&:focus': {
+              outline: 'none'
+            }
+          }}>
+            JOIN US
+          </Button>
+        </Link>
       </div>
+
       <div sx={{display: 'none',
                 '@media screen and (max-width: 800px)': {
                   display: 'flex'
@@ -174,58 +153,33 @@ export const Header = () => {
           display: 'flex',
           flexDirection: 'column'
         }} >
-        <Link to="/projects" >
-          <NavLink onClick={() => toggleShow(!show)} sx = {{marginLeft: '32px', mb: 2}}>Projects</NavLink>
+        <Link to="/projects">
+          <NavLink onClick={() => toggleShow(!show)} sx={{ fontSize: '0.9em', marginLeft: '32px', mb: 2 }}>OUR WORK</NavLink>
         </Link>
-        <Link to="/visualizations">
-          <NavLink onClick={() => toggleShow(!show)} sx={{mb: 2}}>Visualizations</NavLink>
-        </Link>
-        <Link to="/podcasts">
-          <NavLink onClick={() => toggleShow(!show)} sx={{mb: 2}}>Podcasts</NavLink>
-        </Link>
-        <NavLink onClick={() => toggleShow(!show)} sx={{mb: 2}}>
-          <a href="https://medium.com/coronavirus-visualization-team" target="_blank" rel="noopener noreferrer" style={{color: 'white', textDecoration: 'none'}}>
-          Blog
-          </a>
-        </NavLink>
         <Link to="/team">
-          <NavLink onClick={() => toggleShow(!show)} sx={{mb: 2}}>Our Team</NavLink>
-        </Link>
-        <Link to="/join">
-          <NavLink onClick={() => toggleShow(!show)} sx={{mb: 2}}>Join Us</NavLink>
+          <NavLink onClick={() => toggleShow(!show)} sx={{ fontSize: '0.9em', mb: 2 }}>OUR TEAM</NavLink>
         </Link>
         <Link to="/resources">
-          <NavLink onClick={() => toggleShow(!show)} sx={{mb: 2}}>Resources</NavLink>
+          <NavLink onClick={() => toggleShow(!show)} sx={{ fontSize: '0.9em', mb: 2 }}>RESOURCES</NavLink>
         </Link>
 
-        <Box sx={{
-          width: '35px',
-          height: '35px',
-
-          borderRadius: '50%',
-          border: 'solid 2px transparent',
-
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-
-          cursor: "pointer",
-
-          transition: "ease-in-out 0.12s",
-
-          ml: '32px',
-
-          '&:hover': {border: 'solid 2px white'},
-        }}
-        onClick={() => setColorMode(colorMode === "dark" ? "default" : "dark")}>
-          <Image
-            sx={{
-              width: "60%",
-              height: "auto",
-            }}
-            src={colorMode === "dark" ? Moon : Sun}
-          />
-        </Box>
+        <Link to='/join' sx={{ mt: 2 }}>
+          <Button sx={{
+            background: '#388CF7',
+            borderRadius: '24px',
+            px: '1.85em',
+            pt: '0.85em !important',
+            pb: '0.85em !important',
+            fontSize: '0.9em',
+            fontWeight: '700',
+            cursor: 'pointer',
+            '&:focus': {
+              outline: 'none'
+            }
+          }}>
+            JOIN US
+          </Button>
+        </Link>
       </div>
 
 
