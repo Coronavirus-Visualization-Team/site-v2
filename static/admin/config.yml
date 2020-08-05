@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: Coronavirus-Visualization-Team/site
+media_folder: static/assets
+public_folder: /assets
+collections:
+  - name: projects
+    label: Projects
+    folder: projects
+    create: true
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "project"}
+      - { name: slug, label: Slug }
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: featured, label: Featured, widget: boolean, default: false}
+      - { name: image, label: Thumbnail Image, widget: image, default: ../img/placeholder.jpg, media_library: {config: {multiple: true}}}
+      - { name: body, label: Body, widget: markdown }
+  - name: partners
+    label: Partners
+    folder: partners
+    create: true
+    fields:
+      - { name: name, label: Name }
+      - { name: image, label: Image, widget: image }
+      - { name: website, label: Website }
+  - name: team
+    label: Team
+    folder: team
+    create: true
+    fields:
+      - { name: name, label: "Full Name" }
+      - { name: executive, label: "Executive director?", widget: boolean }
+      - { name: director, label: "Director?", widget: boolean }
+      - { name: lead, label: "Project Lead?", widget: boolean }
+      - { name: community_manager, label: "Community Manager" }
+      - { name: position, label: "Position (required if executive director)", required: false }
+      - { name: project, label: "Project (required if project lead)", required: false }
+      - { name: image, label: "Photo (required if executive director) (Must be square or it will get stretched)", widget: image, required: false }
