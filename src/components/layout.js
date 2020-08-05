@@ -84,7 +84,7 @@ export const Header = () => {
           ml: 'auto !important'
         }}>
           <Button sx={{
-            bg: 'blue',
+            background: '#388CF7',
             borderRadius: '24px',
             px: '1.85em',
             pt: '0.85em !important',
@@ -165,7 +165,7 @@ export const Header = () => {
 
         <Link to='/join' sx={{ mt: 2 }}>
           <Button sx={{
-            bg: 'blue',
+            background: '#388CF7',
             borderRadius: '24px',
             px: '1.85em',
             pt: '0.85em !important',

@@ -17,15 +17,11 @@ export const palette = {
   yellow: "#F5A623",
   cyan: "#79FFE1",
   blue: "#0070F3",
-  nav: "#4A4A4A",
 
   modes: {
     default: {
-      background: "#F8F8F8",
-      secondaryBackground: "#F8F8F8",
-      green: "#00E4BF",
-      grey: "#4A4A4A",
-      blue: "#388CF7",
+      background: "#ffffff",
+      secondaryBackground: "#ffffff",
       primary: "#000000",
       secondary: "rgba(0, 0, 0, 0.7)",
       tertiary: "rgba(0, 0, 0, 0.5)",
@@ -42,9 +38,9 @@ export const palette = {
 
 export default merge(base, {
   fonts: {
-    body: "Chivo, sans-serif",
-    heading: "Chivo, sans-serif",
-    monospace: "Chivo, monospace",
+    body: "'Circular Std', system-ui, Roboto, sans-serif",
+    heading: "system-ui, Roboto, sans-serif",
+    monospace: "Menlo, monospace",
   },
   fontSizes: [14, 18, 24, 28, 36, 48, 64, 72, 96, 128],
   fontWeights: {
@@ -64,7 +60,9 @@ export default merge(base, {
       cursor: "pointer",
     },
   },
-
+  background: {
+    gradient: "linear-gradient(147.71deg, #168CA6 17.12%, #20E8C4 90.62%)",
+  },
   shadows: {
     base: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
     hover: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
@@ -86,7 +84,7 @@ export default merge(base, {
   useLocalStorage: false,
   colors: {
     ...palette,
-    text: palette.nav,
+    text: palette.white,
     sunken: palette.snow,
     secondary: palette.muted,
     muted: palette.smoke,
