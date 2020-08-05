@@ -166,7 +166,7 @@ export const Header = () => {
                 paddingTop: '30px',
                 width: '50vw',
                 right: show ? '0' : 'calc(-50vw)',
-                background: 'gradient',
+                background: "#F8F8F8",
                 boxShadow: 'base',
                 transition: 'all 0.3s cubic-bezier(.25, .8, .25, 1)',
                 color: 'black'}}>
