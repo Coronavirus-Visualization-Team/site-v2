@@ -311,6 +311,7 @@ export const Footer = () => {
               borderRadius: "button",
               boxShadow: "0px 0px 10px #D2D2D2",
               flex: "1",
+              cursor: 'pointer'
             }}
           >
             Subscribe
