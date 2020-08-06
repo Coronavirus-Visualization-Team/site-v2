@@ -15,7 +15,7 @@ import {
 import { Link } from "gatsby"
 import favicon from "../../static/assets/favicon.ico"
 import Logo from "./cvtlogo.svg"
-import LogoIconOnly from "../../static/logo_icononly.png";
+import LogoIconOnly from "./cvt-new-logo.png";
 import { Helmet } from "react-helmet"
 import TwitterLogo from "./social-icons/Twitter.png"
 import InstagramLogo from "./social-icons/Instagram.png"
