@@ -30,13 +30,13 @@ export const palette = {
       secondary: "rgba(0, 0, 0, 0.7)",
       tertiary: "rgba(0, 0, 0, 0.5)",
     },
-    dark: {
-      background: "#17171d",
-      secondaryBackground: "#252429",
-      primary: "#ffffff",
-      secondary: "rgba(255, 255, 255, 0.7)",
-      tertiary: "rgba(255, 255, 255, 0.5)",
-    }
+    // dark: {
+    //   background: "#17171d",
+    //   secondaryBackground: "#252429",
+    //   primary: "#ffffff",
+    //   secondary: "rgba(255, 255, 255, 0.7)",
+    //   tertiary: "rgba(255, 255, 255, 0.5)",
+    // }
   }
 }
 
