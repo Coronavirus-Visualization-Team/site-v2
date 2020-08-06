@@ -46,7 +46,7 @@ const IndexPage = (props) => {
       <Container
               sx={{
                 position: "relative",
-                background: colorMode === "dark" ? "#17171d" : "#F8F8F8;",
+                background: "#F8F8F8",
                 m: "8vh 0 0 0",
                 width: "100vw",
                 minWidth: "100vw"
@@ -60,7 +60,7 @@ const IndexPage = (props) => {
           mt: 4,
           color: "primary",
           fontSize: [3, 4],
-          background: colorMode === "dark" ? "#17171d" : "#F8F8F8;"
+          background: "#F8F8F8"
         }}
       >
         Projects
@@ -70,7 +70,7 @@ const IndexPage = (props) => {
       <Container
         sx={{
           position: "relative",
-          background: colorMode === "dark" ? "#17171d" : "#F8F8F8;",
+          background: "#F8F8F8",
           m: 0,
           width: "100vw",
           minWidth: "100vw",
@@ -108,7 +108,7 @@ const IndexPage = (props) => {
       <Container
               sx={{
                 position: "relative",
-                background: colorMode === "dark" ? "#17171d" : "#F8F8F8;",
+                background: "#F8F8F8",
                 m: 0,
                 width: "100vw",
                 minWidth: "100vw"
@@ -122,7 +122,7 @@ const IndexPage = (props) => {
           mt: 4,
           color: "primary",
           fontSize: [3, 4],
-          background: colorMode === "dark" ? "#17171d" : "#F8F8F8;"
+          background: "#F8F8F8"
         }}
       >
         Visualizations
@@ -132,7 +132,7 @@ const IndexPage = (props) => {
       <Container
         sx={{
           position: "relative",
-          background: colorMode === "dark" ? "#17171d" : "#F8F8F8;",
+          background: "#F8F8F8",
           m: 0,
           width: "100vw",
           minWidth: "100vw",
@@ -189,7 +189,7 @@ const IndexPage = (props) => {
           mt: 4,
           backgroundColor: "white",
           borderRadius: "5px",
-          boxShadow: colorMode === "dark" ? "0 0 16px rgba(255, 255, 255, 0.3)" : "none",
+          boxShadow: "none",
           padding: 3,
           mb: "3em"
         }}

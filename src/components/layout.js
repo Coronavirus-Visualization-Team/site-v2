@@ -343,7 +343,7 @@ export const Footer = () => {
         <Image
           sx={{
             // vvv To turn logo black
-            filter: `${colorMode === 'default' ? 'invert(100%)' : 'invert(0%)'}`,
+            filter: 'invert(100%)',
             maxWidth: 200,
           }}
           src={Logo}
