@@ -188,22 +188,6 @@ export const Header = () => {
   )
 }
 
-export const NavBackground = () => {
-  return (
-    <Container
-      sx={{
-        position: "absolute",
-        top: "0",
-        left: "0",
-        background: "gradient",
-        width: "100%",
-        minWidth: "100%",
-        height: "65vh",
-      }}
-    ></Container>
-  )
-}
-
 export const Footer = () => {
   return (
     <Box
@@ -547,7 +531,6 @@ export const Footer = () => {
 export default ({ children }) => (
   <Container sx={{ maxWidth: "xl", margin: "auto", px: 3 }}>
     <Header />
-    <NavBackground />
     {children}
     <Footer />
   </Container>
