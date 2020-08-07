@@ -210,7 +210,7 @@ export const Footer = () => {
       as="footer"
       sx={{
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: ['column', 'row'],
         flexWrap: 'wrap',
         py: 4,
         mt: 4,
@@ -259,7 +259,6 @@ export const Footer = () => {
               color: "secondary",
               borderRadius: "20px",
               border: 'none',
-              mb: [4, 0],
               mt: 3,
               mr: '2%',
               p: '0.75em',
@@ -276,7 +275,6 @@ export const Footer = () => {
               color: "secondary",
               borderRadius: "20px",
               border: 'none',
-              mb: [4, 0],
               mt: 3,
               p: '0.75em',
               boxShadow: '0px 0px 10px #D2D2D2',
@@ -292,7 +290,6 @@ export const Footer = () => {
               color: "secondary",
               borderRadius: "20px",
               border: 'none',
-              mb: [4, 0],
               mt: 3,
               p: '0.75em',
               boxShadow: '0px 0px 10px #D2D2D2',
@@ -303,10 +300,11 @@ export const Footer = () => {
           <Button
             type="submit"
             sx={{
-              //fontSize: [14, 18],
+              minHeight: '50px',
+              fontSize: [14, 16],
               p: '0.75em',
               mt: 3,
-              ml: 3,
+              ml: 2,
               bg: "green",
               borderRadius: "button",
               boxShadow: "0px 0px 10px #D2D2D2",
@@ -338,13 +336,15 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
+              fontSize: [14, 16],
               p: '0.75em',
-              px: '1.75em',
+              px: ['1.6em', '1.75em'],
               mt: 4,
               ml: 3,
               bg: "blue",
               borderRadius: "button",
               boxShadow: "0px 0px 10px #D2D2D2",
+              whiteSpace: 'nowrap'
             }}
           >
             Donate &#187;
@@ -362,7 +362,8 @@ export const Footer = () => {
         <Box
           sx={{
             ml: 'auto',
-            maxWidth: '90%',
+            maxWidth: ['100%', '90%'],
+            mt: [5, 0],
             height: '100%',
             display: 'flex',
             flexDirection: 'column'
