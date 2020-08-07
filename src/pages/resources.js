@@ -22,10 +22,13 @@ export default () => (
     <Text
       sx={{
         fontSize: [3, 4],
+        fontWeight: '700',
+        textAlign: 'center',
         maxWidth: ["100%", "65%"],
         mb: 3,
         mt: 3,
-        color: "green"
+        color: "green",
+        alignSelf: 'center'
       }}
     >
       Want to get involved in combating COVID-19?
@@ -33,8 +36,10 @@ export default () => (
 
     <Text
       sx={{
-        fontSize: [1, 2],
-        maxWidth: ["100%", "65%"]
+        fontSize: [0, 1],
+        maxWidth: ["100%", "65%"],
+        textAlign: 'center',
+        alignSelf: 'center'
       }}
     >
       Our team crowdsourced these resources and opportunities to learn new skills, join initiatives, and attend online events—all for free.
@@ -43,9 +48,26 @@ export default () => (
     <Box
       sx={{
         width: "100%",
-        mt: 6
+        mt: 6,
+        bg: 'green',
+        px: '5%',
+        py: '5%',
+        display: 'flex',
+        flexDirection: 'column'
       }}
     >
+      <Text
+        sx={{
+          fontSize: [3, 4],
+          fontWeight: '700',
+          textAlign: "center",
+          color: "white",
+          mb: 4
+        }}
+      >
+        Resources
+      </Text>
+
       <Embed
         src="https://airtable.com/embed/shr9Csx0eMqbLByBN?backgroundColor=teal"
         sx={{
@@ -67,9 +89,10 @@ export default () => (
       <Text
         sx={{
           fontSize: [3, 4],
+          fontWeight: '700',
           width: "100%",
           textAlign: "center",
-          color: "primary"
+          color: 'green'
         }}
       >
         Have suggestions?
