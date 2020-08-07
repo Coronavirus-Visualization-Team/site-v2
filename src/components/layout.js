@@ -59,7 +59,7 @@ export const Header = () => {
           src={LogoIconOnly}
         />
       </Link>
-      <Box sx={{ ml: "auto" }} />
+      <Box sx={{ m: "auto" }} />
       <div sx = {{
         display: 'flex',
         alignItems: 'center',
