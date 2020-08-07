@@ -25,7 +25,22 @@ const TeamPage = (props) => {
       <Text
         sx={{
           fontSize: [3, 4],
+          fontWeight: '700',
           alignItems: 'center',
+          alignSelf: 'center',
+          mb: 3,
+          color: 'green'
+        }}
+      >
+        Our Team
+      </Text>
+
+      <Text
+        sx={{
+          fontSize: [2, 3],
+          fontWeight: '700',
+          alignItems: 'center',
+          alignSelf: 'center',
           mb: 4
         }}
       >
@@ -33,8 +48,7 @@ const TeamPage = (props) => {
       </Text>
 
         <Grid
-        gap={2}
-        width={[128, null, 192]}
+        columns={[ 2, null, 4 ]}
         sx={{
           justifyItems: ['center', 'unset']
         }}
@@ -47,6 +61,52 @@ const TeamPage = (props) => {
                 return null;
               }
 
+              return (
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center'
+                  }}
+                >
+                  <Box
+                    sx={{
+                      position: 'relative',
+                      width: [128, 192],
+                      height: [128, 192],
+                      borderRadius: '10px',
+                      ":hover > #overlay": {
+                        opacity: 1
+                      },
+                    }}
+                  >
+                    <Image src={data.image} sx={{ width: '100%', height: '100%', borderRadius: "10px" }} />
+                  </Box>
+
+                  <Text
+                    sx={{
+                      fontSize: [0, 1],
+                      fontWeight: '700',
+                      mb: 1,
+                      color: 'green',
+                      textAlign: 'center'
+                    }}
+                  >
+                    {data.name}
+                  </Text>
+
+                  <Text
+                    sx={{
+                      fontSize: [0, 1],
+                      fontWeight: '700',
+                      textAlign: 'center'
+                    }}
+                  >
+                    {data.position}
+                  </Text>
+                </Box>
+              )
+              /**
               return (
                 <Box
                   sx={{
@@ -101,42 +161,98 @@ const TeamPage = (props) => {
                     </Box>
                   </Box>
                 </Box>
-              )
+              )*/
             }
           })}
       </Grid>
 
-      <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Erevna Board of Directors</Text>
+      <Box
+        sx={{
+          bg: 'blue',
+          display: 'flex',
+          flexDirection: 'column',
+          mt: 4,
+          mb: 4
+        }}
+      >
+        <Text sx={ { variant: "styles.headerText", mb: 4, color: "white", alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Erevna Board of Directors</Text>
+        <Text
+          sx={ { variant: "styles.bodyText", color: "secondary" } }
+        >
+
+        {/** width={[ 128, null, 192 ]} */}
+        <Grid columns={[ 2, null, 4 ]} sx={{ px: '5%' }}>
+          {teamData.map((item) => {
+              if (item.node.childMarkdownRemark) {
+                const data = item.node.childMarkdownRemark.frontmatter;
+
+                if(data.erevna) {
+                  return (
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        width: '100%'
+                      }}
+                    >
+                      <a href={data.linkedin} target="_blank" sx={{
+                          color: "white"
+                        }}>{data.name}</a>
+                      <small style={{
+                        "fontWeight": "100",
+                        "fontSize": "12.5px",
+                        "display": "block",
+                        "color": "white"
+                      }}>{data.erevna}</small>
+                    </Box>
+                  )
+              }
+              } else {
+                return null;
+              }
+            })}
+        </Grid>
+      </Text>
+
+      <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, color: "white", alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Project Leads</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
 
-      {/** width={[ 128, null, 192 ]} */}
-      <Grid columns={[ 2, null, 4 ]}>
-        {teamData.map((item) => {
-            if (item.node.childMarkdownRemark) {
-              const data = item.node.childMarkdownRemark.frontmatter;
+        {/** width={[ 128, null, 192 ]} */}
+        <Grid columns={[ 2, null, 4 ]} sx={{ px: '5%' }}>
+          {teamData.map((item) => {
+              if (item.node.childMarkdownRemark) {
+                const data = item.node.childMarkdownRemark.frontmatter;
 
-              if(data.erevna) {
-                return (
-                  <Text>
-                    <a href={data.linkedin} target="_blank" sx={{
-                        color: "secondary"
-                      }}>{data.name}</a>
-                    <small style={{
-                      "fontWeight": "100",
-                      "fontSize": "12.5px",
-                      "display": "block"
-                    }}>{data.erevna}</small>
-                  </Text>
-                )
-            }
-            } else {
-              return null;
-            }
-          })}
-      </Grid>
-    </Text>
+                if(data.lead) {
+                  return (
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        width: '100%'
+                      }}
+                    >
+                      <a href={data.linkedin} target="_blank" sx={{
+                          color: "white"
+                        }}>{data.name}</a>
+                      <small style={{
+                        "fontWeight": "100",
+                        "fontSize": "12.5px",
+                        "display": "block",
+                        "color": "white"
+                      }}>{data.project}</small>
+                    </Box>
+                  )
+              }
+              } else {
+                return null;
+              }
+            })}
+        </Grid>
+      </Text>
+    </Box>
 
       <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Directors</Text>
       <Text
@@ -169,38 +285,6 @@ const TeamPage = (props) => {
           })}
       </Grid>
     </Text>
-
-    <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Project Leads</Text>
-    <Text
-      sx={ { variant: "styles.bodyText", color: "secondary" } }
-    >
-
-    {/** width={[ 128, null, 192 ]} */}
-    <Grid columns={[ 2, null, 4 ]}>
-      {teamData.map((item) => {
-          if (item.node.childMarkdownRemark) {
-            const data = item.node.childMarkdownRemark.frontmatter;
-
-            if(data.lead) {
-              return (
-                <Text>
-                  <a href={data.linkedin} target="_blank" sx={{
-                      color: "secondary"
-                    }}>{data.name}</a>
-                  <small style={{
-                    "fontWeight": "100",
-                    "fontSize": "12.5px",
-                    "display": "block"
-                  }}>{data.project}</small>
-                </Text>
-              )
-          }
-          } else {
-            return null;
-          }
-        })}
-    </Grid>
-  </Text>
 
     <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Community Managers</Text>
       <Text
