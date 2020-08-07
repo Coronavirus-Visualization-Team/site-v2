@@ -59,7 +59,7 @@ export const Header = () => {
           src={LogoIconOnly}
         />
       </Link>
-      <Box sx={{ m: "auto" }} />
+      <Box sx={{ ml: "auto" }} />
       <div sx = {{
         display: 'flex',
         alignItems: 'center',
@@ -70,7 +70,7 @@ export const Header = () => {
           display: 'none'
         }
       }}>
-        <div sx={{ ml: 'auto' }} />
+        <div sx={{ ml: 'auto !important' }} />
         <Link to="/projects">
           <NavLink sx={{ fontSize: '0.9em', mx: '1.75em' }}>OUR WORK</NavLink>
         </Link>
