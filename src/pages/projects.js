@@ -2,7 +2,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
-import { Container, jsx, Text, Grid, Box } from "theme-ui"
+import { Container, jsx, Text, Grid, Box, Card, Button} from "theme-ui"
 import ProjectPicker from "../components/Projects/ProjectPicker"
 import Tile from "../components/Projects/Tile"
 import { Helmet } from "react-helmet"
@@ -26,6 +26,48 @@ const Projects = ({ data }) => {
           mb: ["5em", "20em"],
         }}
       >
+      <Text
+        sx={{
+          fontSize: [3, 4],
+          fontWeight: '700',
+          alignItems: 'center',
+          alignSelf: 'center',
+          mb: 3,
+          color: 'green',
+          textAlign: 'center'
+        }}
+      >
+        Our Work
+      </Text>
+      <Text
+        sx={{
+          fontSize: [0, 1],
+          fontWeight: '400',
+          alignItems: 'center',
+          alignSelf: 'center',
+          mb: 3,
+          color: 'black',
+          textAlign: 'center'
+        }}
+      >
+        Our team has created empirical data visualizations that educate the public 
+        on the pandemic's ongoing impact and display information from multiple, 
+        often overlooked angles such as climate implications, socioeconomic factors,
+        and social aspects.
+      </Text>
+      <Text
+        sx={{
+          fontSize: [3, 4],
+          fontWeight: '700',
+          alignItems: 'center',
+          alignSelf: 'center',
+          mb: 3,
+          color: 'green',
+          textAlign: 'center'
+        }}
+      >
+        
+      </Text>
         <Container
           sx={{
             fontSize: [2, 3],
@@ -40,55 +82,44 @@ const Projects = ({ data }) => {
         >
           <Text
             sx={{
-              mb: "1rem",
+              mb: "0.01rem",
               fontWeight: "700",
+              textAlign: 'center',
             }}
           >
-            Here are some of the featured work we're doing.
+            Featured Projects
           </Text>
           <ProjectPicker posts={posts}/>
         </Container>
       </Container>
-
+      <Grid columns={[1, 2]} gap={[25, 50]}>
+        <Box>
+        <Text sx={ { variant: "styles.headerText", mb: 4, color: "black" } }>Visualizations</Text>
+        </Box>
+        <Box>
+        <Text sx={ { variant: "styles.headerText", mb: 4, color: "black" } }>More Projects</Text>
+        </Box>
+    </Grid>
       <Container
         sx={{
           maxWidth: "xl",
-          position: "relative"
+          position: "relative",
+          display: "flex"
         }}
       >
         {posts && (
-          <Grid columns={[1, 2]} gap={[25, 50]}>
+          <Card sx={{width:"50%", alignItems: 'top', float: 'right'}}>
             {posts.map(({ node: post }) => {
               return <Tile
               slug={post.frontmatter.slug}
               title={post.frontmatter.title}
-              img={post.frontmatter.image} />
+              img={post.frontmatter.image} >
+              </Tile>
             })}
-          </Grid>
+          </Card>
         )}
       </Container>
-
-
-      <Box
-          sx={{
-            fontSize: [2, 3],
-            display: "flex",
-            flexDirection: "column",
-            mt: 5
-          }}
-        >
-          <Text
-            sx={{
-              mb: "1rem",
-              fontWeight: "700",
-              color: "primary"
-            }}
-          >
-            Additional Project Information
-          </Text>
-        </Box>
-
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrFnhTP0wtwyTWDw?backgroundColor=blueLight" frameborder="0" onmousewheel="" width="100%" height="533" style={{background: 'transparent', border: '1px solid #ccc'}}></iframe>
+     
     </>
   )
 }

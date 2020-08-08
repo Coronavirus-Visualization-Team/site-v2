@@ -40,7 +40,7 @@ const IndexPage = (props) => {
       >
         We're the <b>Coronavirus Visualization Team</b>,  a crowdsourced student network of data scientists and analysts, developers, and communicators working to better visualize and share the impacts, present and future, of COVID-19.
       </Text>
-
+      
       <Text
         sx={{
           width: "100%",
@@ -75,7 +75,7 @@ const IndexPage = (props) => {
               sx={{
                 width: ["20%"],
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "center"
               }}
             >
               <a href={data.website} target="_blank" rel="noopener noreferrer">
@@ -157,32 +157,4 @@ export const query = graphql`
         }
       }
     },
-    breakingnews: allFile(filter: {sourceInstanceName: {eq: "breakingnews"}} limit: 4) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              name
-              author
-              image
-              link
-              linkTarget
-          }
-        }
-      }
-    }
-  },
-  projects: allFile(filter: {sourceInstanceName: {eq: "markdown-pages"}} limit: 4) {
-    edges {
-      node {
-        childMarkdownRemark {
-          frontmatter {
-            title
-            slug
-            image
-        }
-      }
-    }
-  }
-},
 }`
