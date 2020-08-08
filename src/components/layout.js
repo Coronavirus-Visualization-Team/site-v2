@@ -70,7 +70,7 @@ export const Header = () => {
           display: 'none'
         }
       }}>
-        <div sx={{ ml: 'auto' }} />
+        <div sx={{ ml: 'auto !important' }} />
         <Link to="/projects">
           <NavLink sx={{ fontSize: '0.9em', mx: '1.75em' }}>OUR WORK</NavLink>
         </Link>
@@ -185,22 +185,6 @@ export const Header = () => {
 
       </div>
     </Box>
-  )
-}
-
-export const NavBackground = () => {
-  return (
-    <Container
-      sx={{
-        position: "absolute",
-        top: "0",
-        left: "0",
-        background: "gradient",
-        width: "100%",
-        minWidth: "100%",
-        height: "65vh",
-      }}
-    ></Container>
   )
 }
 
@@ -547,7 +531,6 @@ export const Footer = () => {
 export default ({ children }) => (
   <Container sx={{ maxWidth: "xl", margin: "auto", px: 3 }}>
     <Header />
-    <NavBackground />
     {children}
     <Footer />
   </Container>
