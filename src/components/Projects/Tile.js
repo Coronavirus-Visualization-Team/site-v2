@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx, Box, Text, Image, useColorMode } from "theme-ui"
 
-const Tile = ({ title, img, slug }) => {
+const Tile = ({ title, img, slug, click }) => {
     const [colorMode, setColorMode] = useColorMode();
 
     return(
         <Box
-        onClick = {() => window.location.href = `/projects/${slug}`}
+        onClick = {() => {click ? click() : window.location.href = `/projects/${slug}`}}
         sx = {{
             width: '100%',
             height: ['fit-content', '300px'],
