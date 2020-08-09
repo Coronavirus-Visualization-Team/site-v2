@@ -156,10 +156,10 @@ const Projects = ({ data }) => {
 
       
       <Box sx={{width:"50%", float: 'left'}}>
-        <Text sx={ { variant: "styles.headerText", mb: 4, color: "black" } }>Visualizations</Text>
+        <Text sx={ { variant: "styles.headerText", mb: 4, color: "black", textAlign: "center" } }>Visualizations</Text>
       </Box>
       <Box sx={{width:"50%", float: 'right'}}>
-        <Text sx={ { variant: "styles.headerText", mb: 4, color: "black" } }>More Projects</Text>
+        <Text sx={ { variant: "styles.headerText", mb: 4, color: "black", textAlign: "center" } }>More Projects</Text>
       </Box>
       
       <Container

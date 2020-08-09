@@ -15,7 +15,7 @@ const Tile = ({ title, img, slug }) => {
             p: [3,4],
             borderRadius: 'tile',
             color: 'primary',
-            mb: [0, 60],
+            mb: "5.5em",
             backgroundColor: "secondaryBackground"
 
         }}>
