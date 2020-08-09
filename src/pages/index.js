@@ -18,21 +18,21 @@ const IndexPage = (props) => {
 
   const [colorMode, setColorMode] = useColorMode();
 
-  const styles = {
+  const backgroundImageStyles = {
         backgroundImage: `url(${Background})`,
-        position:'relative',
+        position:'center',
         maxWidth:'900px',
-        maxheight:'900px',
+        maxHeight:'900px',
         display:'block',
         backgroundSize: 'cover',
         Background: 'linear-gradient',
-        opacity: '0.8'
+        opacity: '0.8',
+        backgroundColor: 'grey',
+        backgroundRepeat: 'no-repeat'
 };
 
   return (
-    <div
-      
-       css={styles}>
+    <div css={backgroundImageStyles}>
     <Box
       sx={{
         position: "relative",
@@ -57,7 +57,7 @@ const IndexPage = (props) => {
         sx={{
           fontSize: [1, 2],
           maxWidth: ["100%", "100%"],
-          fontWeight: '600',
+          fontWeight: '500',
           mb: '3',
         
           color: "green"
