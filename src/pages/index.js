@@ -24,7 +24,9 @@ const IndexPage = (props) => {
         maxWidth:'900px',
         maxheight:'900px',
         display:'block',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        Background: 'linear-gradient',
+        opacity: '0.8'
 };
 
   return (
@@ -44,7 +46,7 @@ const IndexPage = (props) => {
         sx={{
           fontSize: [1, 3],
           maxWidth: ["100%", "100%"],
-          fontWeight: '700',
+          fontWeight: '600',
           my: "15vh",
           p: 4,
           color: "white"
@@ -55,13 +57,13 @@ const IndexPage = (props) => {
         sx={{
           fontSize: [1, 2],
           maxWidth: ["100%", "100%"],
-          fontWeight: '700',
+          fontWeight: '600',
           mb: '3',
         
           color: "green"
         }}
       >
-        #WeAreInThisTogether
+        #WeAreInThisTogether.
       </Text>
       </Text>
       
