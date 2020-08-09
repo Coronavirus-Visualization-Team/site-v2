@@ -167,8 +167,7 @@ const JoinPage = props => {
         sx={{
           fontSize: [14, 18],
           px: 3,
-          bg: "white",
-          background: "#168CA6",
+          bg: "blue",
           borderRadius: "button",
           boxShadow: "base",
           flex: "1",
@@ -193,8 +192,7 @@ const JoinPage = props => {
         sx={{
           fontSize: [14, 18],
           px: 3,
-          bg: "white",
-          background: "#168CA6",
+          bg: "blue",
           borderRadius: "button",
           boxShadow: "base",
           flex: "1",
@@ -224,8 +222,7 @@ const JoinPage = props => {
         sx={{
           fontSize: [14, 18],
           px: 3,
-          bg: "white",
-          background: "#168CA6",
+          bg: "blue",
           borderRadius: "button",
           boxShadow: "base",
           flex: "1",
