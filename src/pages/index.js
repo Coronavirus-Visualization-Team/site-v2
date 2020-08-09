@@ -2,9 +2,10 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { Helmet } from "react-helmet"
-import { jsx, Text, Divider, Box, Container, Grid, Image, useColorMode } from "theme-ui"
+import { jsx, Text, Divider, Box, Container, Grid, Image, useColorMode} from "theme-ui"
 import Tile from "../components/Projects/Tile"
 import VizTile from "../components/Visualizations/VizTile"
+import Background from '../components/Bitmap.png'
 import ReactGA from 'react-ga';
 
 const trackingId = "UA-171730199-2"; 
@@ -17,16 +18,54 @@ const IndexPage = (props) => {
 
   const [colorMode, setColorMode] = useColorMode();
 
+  const styles = {
+        backgroundImage: `url(${Background})`,
+        position:'relative',
+        maxWidth:'900px',
+        maxheight:'900px',
+        display:'block',
+        backgroundSize: 'cover'
+};
+
   return (
+    <div
+      
+       css={styles}>
     <Box
       sx={{
         position: "relative",
         display: "flex",
         flexDirection: "column",
-        alignItems: 'center'
+        // alignItems: 'center'
       }}
     >
       <Helmet title="CVT | Home" />
+      <Text
+        sx={{
+          fontSize: [1, 3],
+          maxWidth: ["100%", "100%"],
+          fontWeight: '700',
+          my: "15vh",
+          p: 4,
+          color: "white"
+        }}
+      >
+        Real Data. Real People.
+        <Text
+        sx={{
+          fontSize: [1, 2],
+          maxWidth: ["100%", "100%"],
+          fontWeight: '700',
+          mb: '3',
+        
+          color: "green"
+        }}
+      >
+        #WeAreInThisTogether
+      </Text>
+      </Text>
+      
+      {/*
       <Text
         sx={{
           fontSize: [1, 3],
@@ -99,7 +138,7 @@ const IndexPage = (props) => {
         }}
       />
 
-      <Box
+    <Box
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -136,7 +175,9 @@ const IndexPage = (props) => {
           Learn More &#187;
         </Link>
       </Box>
+        */}
     </Box>
+    </div>
   )
 }
 
