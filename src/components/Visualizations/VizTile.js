@@ -1,75 +1,45 @@
 /** @jsx jsx */
-import { jsx, Box, Text, Image } from "theme-ui"
+import { jsx, Box, Text, Image, useColorMode } from "theme-ui"
 
-const VizTile = ({ name, image, author, link, linkTarget }) => {
+const VizTile = ({ title, img, slug, link, linkTarget }) => {
+    const [colorMode, setColorMode] = useColorMode();
 
     return(
         <Box
-        sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        }}
-    >
-        <a href={link} target={linkTarget} rel="noopener noreferrer">
-        <Box
-            sx={{
-            position: 'relative',
+        onClick={() => window.open(`${link}`, `${linkTarget}`)}
+        sx = {{
             width: '100%',
-            height: [300, 350],
-            mb: "1vh",
-            borderRadius: '10px',
-            boxShadow: "base",
-            "#overlay": {
-                opacity: 1
-            },
-            }}
-        >
-            <Image src={image} sx={{ width: '100%', height: '100%', borderRadius: "10px" }} />
-            <Box
-            sx={{
-                position: 'absolute',
-                top: "72%",
-                bottom: 0,
-                left: 0,
-                right: 0,
-                borderRadius: '10px',
-                transition: 'ease-in-out 0.12s',
-                backgroundColor: 'black',
-                opacity: 0
-            }}
-            id="overlay"
-            >
-            <Box
-                sx={{
-                position: 'absolute',
-                top: '10%',
-                left: '10px',
-                }}
-                id="text"
-            >
-                <Text
-                sx={{
-                    color: "white",
-                    fontWeight: "600",
-                    fontSize: [0, 1]
-                }}
-                >
-                {name}
-                </Text>
-                <Text
-                sx={{
-                    color: "rgba(255, 255, 255, 0.7)",
-                    fontSize: [0, 1]
-                }}
-                >
-                {author}
+            height: ['fit-content', '300px'],
+            boxShadow: 'base',
+            bg: 'white',
+            p: [3,4],
+            borderRadius: 'tile',
+            color: 'primary',
+            mb: "5.5em",
+            backgroundColor: "secondaryBackground"
+
+        }}>
+            <Text
+                sx = {{
+                    fontSize: [1, 2],
+                    fontWeight: '600',
+                    mb: '15px'
+                }}>
+                    {title}
             </Text>
-            </Box>
-            </Box>
+            <Image src = {img}
+                    sx = {{
+                        width: ['350px', '100%'],
+                        height: ['210px', '250px'],
+                        borderRadius: 'tile',
+                        boxShadow: `${colorMode === "dark" ? "0 3px 6px rgba(255,255,255,0.14), 0 3px 6px rgba(255,255,255,0.18)" : "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"}`,
+                        ml: [0, '10px'],
+                        transition: '0.2s',
+                        '&:hover': {boxShadow: `${colorMode === "dark" ? "0 14px 28px rgba(255,255,255,0.20), 0 10px 10px rgba(255,255,255,0.17)" : "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)"}`, cursor: 'pointer'}
+                    }}
+                    />
         </Box>
-        </a>
-    </Box>
-)
+    )
 }
+
 export default VizTile

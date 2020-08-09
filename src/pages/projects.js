@@ -5,6 +5,7 @@ import { graphql, StaticQuery } from "gatsby"
 import { Container, jsx, Text, Grid, Box, Card, Button, Image } from "theme-ui"
 import ProjectPicker from "../components/Projects/ProjectPicker"
 import Tile from "../components/Projects/Tile"
+import VizTile from "../components/Visualizations/VizTile"
 import { Helmet } from "react-helmet"
 import ReactGA from 'react-ga';
 
@@ -95,7 +96,7 @@ const Projects = ({ data }) => {
 
             <Button
               onClick = {() => {
-                if(featured[0]?.node?.frontmatter?.slug.length != 0){
+                if(featured[0]?.node?.frontmatter?.slug.length !== 0){
                     window.location.href = `/projects/${featured[0]?.node?.frontmatter?.slug}`
                 }
               }}
@@ -173,12 +174,12 @@ const Projects = ({ data }) => {
         {vizPosts && (
           <Box sx={{width:"50%", alignItems: 'top', float: 'left', overflowY: "scroll", overflowX: "visible", px: 3, py: 3}}>
             {vizPosts.map(({ node: post }) => {
-              return <Tile
-              //slug={post.childMarkdownRemark.frontmatter.slug}
-              click={() => window.open(post.childMarkdownRemark.frontmatter.link, "_blank").focus()}
+              return <VizTile
+              link= {post.childMarkdownRemark.frontmatter.link}
               title={post.childMarkdownRemark.frontmatter.name}
-              img={post.childMarkdownRemark.frontmatter.image} >
-              </Tile>
+              img={post.childMarkdownRemark.frontmatter.image}
+              linkTarget={post.childMarkdownRemark.frontmatter.linkTarget} >
+              </VizTile>
             })}
           </Box>
         )}
