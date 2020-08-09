@@ -195,7 +195,7 @@ const TeamPage = (props) => {
                         width: '100%'
                       }}
                     >
-                      <a href={data.linkedin} target="_blank" sx={{
+                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
                           color: "white"
                         }}>{data.name}</a>
                       <small style={{
@@ -234,7 +234,7 @@ const TeamPage = (props) => {
                         width: '100%'
                       }}
                     >
-                      <a href={data.linkedin} target="_blank" sx={{
+                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
                           color: "white"
                         }}>{data.name}</a>
                       <small style={{
@@ -268,7 +268,7 @@ const TeamPage = (props) => {
               if(data.director) {
                 return (
                   <Text>
-                    <a href={data.linkedin} target="_blank" sx={{
+                    <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
                         color: "secondary"
                       }}>{data.name}</a>
                     <small style={{
@@ -300,7 +300,7 @@ const TeamPage = (props) => {
               if(data.community_manager) {
                 return (
                   <Text>
-                    <a href={data.linkedin} target="_blank" sx={{
+                    <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
                         color: "secondary"
                       }}>{data.name}</a>
                     <small style={{
@@ -334,7 +334,7 @@ const TeamPage = (props) => {
                 if (data.position || data.project) {
                   return (
                     <Text>
-                      <a href={data.linkedin} target="_blank" sx={{
+                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
                           color: "secondary"
                         }}>{data.name}</a>
 
@@ -360,7 +360,7 @@ const TeamPage = (props) => {
                   if (!data.position && !data.project) {
                     return (
                       <Text>
-                        <a href={data.linkedin} target="_blank" sx={{
+                        <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
                             color: "secondary"
                           }}>{data.name}</a>
                       </Text>
