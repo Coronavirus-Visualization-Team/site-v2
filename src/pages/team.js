@@ -3,6 +3,7 @@ import React from "react"
 import { jsx, Text, Box, Image, Grid } from "theme-ui"
 import { Helmet } from "react-helmet"
 import ReactGA from 'react-ga';
+import { graphql } from "gatsby";
 
 const trackingId = "UA-171730199-2"; 
 
