@@ -59,7 +59,7 @@ export const Header = () => {
           src={LogoIconOnly}
         />
       </Link>
-      <Box sx={{ ml: "auto" }} />
+      <Box sx={{ m: "auto !important" }} />
       <div sx = {{
         display: 'flex',
         alignItems: 'center',
@@ -72,13 +72,13 @@ export const Header = () => {
       }}>
         <div sx={{ ml: 'auto !important' }} />
         <Link to="/projects">
-          <NavLink sx={{ fontSize: '0.9em', mx: '1.75em' }}>OUR WORK</NavLink>
+          <NavLink sx={{ fontSize: '0.9em', mx: '1.75em', ":hover,:active": { color: "green",} }}>OUR WORK</NavLink>
         </Link>
         <Link to="/team">
-          <NavLink sx={{ fontSize: '0.9em', mx: '1.75em' }}>OUR TEAM</NavLink>
+          <NavLink sx={{ fontSize: '0.9em', mx: '1.75em', ":hover,:active": { color: "green",} }}>OUR TEAM</NavLink>
         </Link>
         <Link to="/resources">
-          <NavLink sx={{ fontSize: '0.9em', mx: '1.75em' }}>RESOURCES</NavLink>
+          <NavLink sx={{ fontSize: '0.9em', mx: '1.75em', ":hover,:active": { color: "green",} }}>RESOURCES</NavLink>
         </Link>
 
         <Link to='/join' sx={{
