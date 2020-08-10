@@ -85,7 +85,7 @@ export const Header = () => {
           ml: 'auto !important'
         }}>
           <Button sx={{
-            background: '#388CF7',
+            bg: 'blue',
             borderRadius: '24px',
             mr: 0,           
             px: '1.85em',
