@@ -154,25 +154,20 @@ const Projects = ({ data }) => {
           */}
         </Container>
       </Container>
-
-      
-      <Box sx={{width:"50%", float: 'left'}}>
-        <Text sx={ { variant: "styles.headerText", mb: 4, color: "black", textAlign: "center" } }>Visualizations</Text>
-      </Box>
-      <Box sx={{width:"50%", float: 'right'}}>
-        <Text sx={ { variant: "styles.headerText", mb: 4, color: "black", textAlign: "center" } }>More Projects</Text>
-      </Box>
       
       <Container
         sx={{
           maxWidth: "xl",
           position: "relative",
           display: "flex",
+          flexDirection: ["column", "row"],
           maxHeight: "800px"
         }}
       >
         {vizPosts && (
-          <Box sx={{width:"50%", alignItems: 'top', float: 'left', overflowY: "scroll", overflowX: "visible", px: 3, py: 3}}>
+          <Box sx={{width:["100%", "50%"], alignItems: 'top', float: 'left', overflowY: "scroll", overflowX: "visible", px: 3, py: 3}}>
+            <Text sx={ { variant: "styles.headerText", mb: 4, pt: "0 !important", color: "black", textAlign: "center" } }>Visualizations</Text>
+
             {vizPosts.map(({ node: post }) => {
               return <VizTile
               link= {post.childMarkdownRemark.frontmatter.link}
@@ -184,15 +179,17 @@ const Projects = ({ data }) => {
           </Box>
         )}
 
-        <Box sx={{width:"50%", alignItems: 'top', float: 'right', overflowY: "scroll", overflowX: "visible", px: 3, py: 3}}>
-            {posts.map(({ node: post }) => {
-              return <Tile
-              slug={post.frontmatter.slug}
-              title={post.frontmatter.title}
-              img={post.frontmatter.image} >
-              </Tile>
-            })}
-          </Box>
+        <Box sx={{width:["100%", "50%"], alignItems: 'top', float: 'right', overflowY: "scroll", overflowX: "visible", px: 3, py: 3}}>
+          <Text sx={ { variant: "styles.headerText", mb: 4, pt: "0 !important", color: "black", textAlign: "center" } }>More Projects</Text>
+
+          {posts.map(({ node: post }) => {
+            return <Tile
+            slug={post.frontmatter.slug}
+            title={post.frontmatter.title}
+            img={post.frontmatter.image} >
+            </Tile>
+          })}
+        </Box>
       </Container>
      
     </>
