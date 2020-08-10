@@ -55,6 +55,7 @@ export const Header = () => {
             width: ["4em", "6em"],
             maxWidth: "79px",
             height: "auto",
+            filter: "brightness(0) invert(1)"
           }}
           src={LogoIconOnly}
         />
@@ -72,13 +73,13 @@ export const Header = () => {
       }}>
         <div sx={{ ml: 'auto !important' }} />
         <Link to="/projects">
-          <NavLink sx={{ fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR WORK</NavLink>
+          <NavLink sx={{ color: "white", fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR WORK</NavLink>
         </Link>
         <Link to="/team">
-          <NavLink sx={{ fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR TEAM</NavLink>
+          <NavLink sx={{ color: "white", fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR TEAM</NavLink>
         </Link>
         <Link to="/resources">
-          <NavLink sx={{ fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>RESOURCES</NavLink>
+          <NavLink sx={{ color: "white", fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>RESOURCES</NavLink>
         </Link>
 
         <Link to='/join' sx={{
@@ -119,21 +120,21 @@ export const Header = () => {
         <p sx={{borderRadius: '10px',
                 height: '2px',
                 width: '25px',
-                backgroundColor: 'black',
+                backgroundColor: 'white',
                 margin: '3px 0',
                 transition: 'all 0.7s cubic-bezier(.25, .8, .25, 1)',
                 transform: show ? 'translateY(9px) rotate(-45deg)' : null}}></p>
         <p sx={{borderRadius: '10px',
                 height: '2px',
                 width: show ? '25px' : '15px',
-                backgroundColor: 'black',
+                backgroundColor: 'white',
                 margin: '3px 0',
                 transition: 'all 0.7s cubic-bezier(.25, .8, .25, 1)',
                 transform: show ? 'translateY(1px) rotate(45deg)': null}}></p>
           <p sx={{borderRadius: '10px',
                 height: '2px',
                 width: show ? '25px' : '20px',
-                backgroundColor: 'black',
+                backgroundColor: 'white',
                 margin: '3px 0',
                 transition: 'all 0.7s cubic-bezier(.25, .8, .25, 1)',
                 transform: show ? 'translateY(-8px) rotate(45deg)' : null}}></p>
