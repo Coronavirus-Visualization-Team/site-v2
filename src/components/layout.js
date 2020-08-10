@@ -87,6 +87,7 @@ export const Header = () => {
           <Button sx={{
             background: '#388CF7',
             borderRadius: '24px',
+            mr: 0,           
             px: '1.85em',
             pt: '0.85em !important',
             pb: '0.85em !important',
@@ -181,8 +182,6 @@ export const Header = () => {
           </Button>
         </Link>
       </div>
-
-
       </div>
     </Box>
   )
