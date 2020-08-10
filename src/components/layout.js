@@ -165,7 +165,7 @@ export const Header = () => {
           <NavLink onClick={() => toggleShow(!show)} sx={{ fontSize: '0.9em', mb: 2 }}>RESOURCES</NavLink>
         </Link>
         <Link to='/join' sx={{ mt: 2 }}>
-          <Button sx={{
+          <Button onClick={() => toggleShow(!show)} sx={{
             background: '#388CF7',
             borderRadius: '24px',
             px: '1.85em',
