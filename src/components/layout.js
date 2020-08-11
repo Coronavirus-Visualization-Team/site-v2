@@ -47,7 +47,7 @@ export const Header = () => {
     >
       <SEO />
       <Helmet>
-        <link rel="icon" href={favicon} />
+        <link rel="icon" href={LogoIconOnly} />
       </Helmet>
       <Link to="/">
         <Image
