@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {
   Container,
   Box,
@@ -12,25 +12,32 @@ import {
   Button,
   useColorMode
 } from "theme-ui"
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
+import { useLocation } from '@reach/router'
 import favicon from "../../static/assets/favicon.ico"
-import Logo from "./cvtlogo.svg"
 import LogoIconOnly from "./cvt-new-logo.png";
 import LogoWithText from "./cvt-logo-full-text.png";
 import { Helmet } from "react-helmet"
 import TwitterLogo from "./social-icons/Twitter.png"
 import InstagramLogo from "./social-icons/Instagram.png"
-import MailLogo from "./social-icons/Mail.png"
-import GithubLogo from "./social-icons/GitHub.png"
 import MediumLogo from "./social-icons/Medium.png"
-import LinkedInLogo from "./social-icons/LinkedIn.png"
-import SpotifyLogo from "./social-icons/spotify.png"
 import FacebookLogo from "./social-icons/Facebook-Icon-White.png"
 
 import SEO from "../components/seo";
 
 export const Header = () => {
-  const [show, toggleShow] = useState(false)
+  const [show, toggleShow] = useState(false);
+  const location = useLocation();
+  const [navColor, setNavColor] = useState('slate');
+
+  useEffect(() => {
+    if(location.pathname === '/') {
+      setNavColor('white');
+    }
+    else {
+      setNavColor('slate');
+    }
+  }, [location]);
 
   return(
     <Box
@@ -55,7 +62,7 @@ export const Header = () => {
             width: ["4em", "6em"],
             maxWidth: "79px",
             height: "auto",
-            filter: "brightness(0) invert(1)"
+            filter: `${navColor === 'white' ? 'brightness(0) invert(1)' : ''}`
           }}
           src={LogoIconOnly}
         />
@@ -73,13 +80,13 @@ export const Header = () => {
       }}>
         <div sx={{ ml: 'auto !important' }} />
         <Link to="/projects">
-          <NavLink sx={{ color: "white", fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR WORK</NavLink>
+          <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR WORK</NavLink>
         </Link>
         <Link to="/team">
-          <NavLink sx={{ color: "white", fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR TEAM</NavLink>
+          <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR TEAM</NavLink>
         </Link>
         <Link to="/resources">
-          <NavLink sx={{ color: "white", fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>RESOURCES</NavLink>
+          <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>RESOURCES</NavLink>
         </Link>
 
         <Link to='/join' sx={{
