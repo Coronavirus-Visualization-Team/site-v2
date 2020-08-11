@@ -107,82 +107,25 @@ const TeamPage = (props) => {
                   </Text>
                 </Box>
               )
-              /**
-              return (
-                <Box
-                  sx={{
-                    position: 'relative',
-                    width: [128, 192],
-                    height: [128, 192],
-                    borderRadius: '10px',
-                    ":hover > #overlay": {
-                      opacity: 1
-                    },
-                  }}
-                >
-                  <Image src={data.image} sx={{ width: '100%', height: '100%', borderRadius: "10px" }} />
-                  <Box
-                    as="a"
-                    href={data.linkedin}
-                    target="_blank"
-                    sx={{
-                      position: 'absolute',
-                      top: 0,
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
-                      borderRadius: '10px',
-                      transition: 'ease-in-out 0.12s',
-                      backgroundColor: 'black',
-                      opacity: 0
-                    }}
-                    id="overlay"
-                  >
-                    <Box
-                      sx={{
-                        position: 'absolute',
-                        bottom: '7px',
-                        left: '10px',
-                      }}
-                      id="text"
-                    >
-                      <Text
-                        sx={{
-                          color: "white",
-                          fontWeight: "600",
-                          fontSize: [0, 1]
-                        }}
-                      >{data.name}</Text>
-                      <Text
-                        sx={{
-                          color: "rgba(255, 255, 255, 0.7)",
-                          fontSize: [0, 1]
-                        }}
-                      >{data.position}</Text>
-                    </Box>
-                  </Box>
-                </Box>
-              )*/
             }
           })}
       </Grid>
 
       <Box
         sx={{
-          bg: 'blue',
           display: 'flex',
           flexDirection: 'column',
           mt: 4,
           mb: 4
         }}
       >
-        <Text sx={ { variant: "styles.headerText", mb: 4, color: "white", alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Erevna Board of Directors</Text>
+        <Text sx={ { variant: "styles.headerText", mb: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Erevna Board of Directors</Text>
         <Text
           sx={ { variant: "styles.bodyText", color: "secondary" } }
         >
 
         {/** width={[ 128, null, 192 ]} */}
-        <Grid columns={[ 2, null, 4 ]} sx={{ px: '5%' }}>
+        <Grid columns={[ 2, null, 4 ]}>
           {teamData.map((item) => {
               if (item.node.childMarkdownRemark) {
                 const data = item.node.childMarkdownRemark.frontmatter;
@@ -196,14 +139,11 @@ const TeamPage = (props) => {
                         width: '100%'
                       }}
                     >
-                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
-                          color: "white"
-                        }}>{data.name}</a>
+                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{ color: 'slate' }}>{data.name}</a>
                       <small style={{
                         "fontWeight": "100",
                         "fontSize": "12.5px",
-                        "display": "block",
-                        "color": "white"
+                        "display": "block"
                       }}>{data.erevna}</small>
                     </Box>
                   )
@@ -215,13 +155,13 @@ const TeamPage = (props) => {
         </Grid>
       </Text>
 
-      <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, color: "white", alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Project Leads</Text>
+      <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Project Leads</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
 
         {/** width={[ 128, null, 192 ]} */}
-        <Grid columns={[ 2, null, 4 ]} sx={{ px: '5%' }}>
+        <Grid columns={[ 2, null, 4 ]}>
           {teamData.map((item) => {
               if (item.node.childMarkdownRemark) {
                 const data = item.node.childMarkdownRemark.frontmatter;
@@ -235,14 +175,11 @@ const TeamPage = (props) => {
                         width: '100%'
                       }}
                     >
-                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
-                          color: "white"
-                        }}>{data.name}</a>
+                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{ color: 'slate' }}>{data.name}</a>
                       <small style={{
                         "fontWeight": "100",
                         "fontSize": "12.5px",
-                        "display": "block",
-                        "color": "white"
+                        "display": "block"
                       }}>{data.project}</small>
                     </Box>
                   )
