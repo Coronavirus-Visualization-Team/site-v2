@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import React from "react"
-import { jsx, Text, Box, Image, Grid } from "theme-ui"
+import React, { useState } from "react"
+import { jsx, Text, Box, Image, Grid, Container } from "theme-ui"
 import { Helmet } from "react-helmet"
 import ReactGA from 'react-ga';
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 
 const trackingId = "UA-171730199-2"; 
 
@@ -11,6 +11,10 @@ ReactGA.initialize(trackingId);
 ReactGA.pageview('/team');
 
 const TeamPage = (props) => {
+  const [projectLeads, setProjectLeads] = useState(false);
+  const [directors, setDirector] = useState(false);
+  const [commManagers, setCommManagers] = useState(false);
+
   let teamData = props.data.team.edges;
   teamData = teamData.sort((x,y) => { return x.position == "undefined" ? -1 : y.position == "undefined" ? 1 : 0; });
 
@@ -36,80 +40,98 @@ const TeamPage = (props) => {
         Our Team
       </Text>
 
-      <Text
-        sx={{
-          fontSize: [2, 3],
-          fontWeight: '700',
-          alignItems: 'center',
-          alignSelf: 'center',
-          mb: 4
-        }}
-      >
-        Executive Directors
-      </Text>
-
-        <Grid
-        columns={[ 2, null, 4 ]}
-        sx={{
-          justifyItems: ['center', 'unset']
-        }}
+      <Container
+          sx={{
+            fontSize: [2, 3],
+            position: "relative",
+            bg: "green",
+            maxWidth: "100%",
+            p: 4,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: 'space-between',
+            mt: "50px",
+            mb: "30px !important"
+          }}
         >
-          {teamData.map((item) => {
-            if (item.node.childMarkdownRemark) {
-              const data = item.node.childMarkdownRemark.frontmatter;
+          <Text
+            sx={{
+              fontSize: [2, 3],
+              fontWeight: '700',
+              alignItems: 'center',
+              alignSelf: 'center',
+              mb: 4,
+              color: 'white'
+            }}
+          >
+            Executive Directors
+          </Text>
 
-              if(!data.executive) {
-                return null;
-              }
+            <Grid
+            columns={[ 2, null, 4 ]}
+            sx={{
+              justifyItems: ['center', 'unset']
+            }}
+            >
+              {teamData.map((item) => {
+                if (item.node.childMarkdownRemark) {
+                  const data = item.node.childMarkdownRemark.frontmatter;
 
-              return (
-                <Box
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center'
-                  }}
-                >
-                  <Box
-                    sx={{
-                      position: 'relative',
-                      width: [128, 192],
-                      height: [128, 192],
-                      borderRadius: '10px',
-                      ":hover > #overlay": {
-                        opacity: 1
-                      },
-                    }}
-                  >
-                    <Image src={data.image} sx={{ width: '100%', height: '100%', borderRadius: "10px" }} />
-                  </Box>
+                  if(!data.executive) {
+                    return null;
+                  }
 
-                  <Text
-                    sx={{
-                      fontSize: [0, 1],
-                      fontWeight: '700',
-                      mb: 1,
-                      color: 'green',
-                      textAlign: 'center'
-                    }}
-                  >
-                    {data.name}
-                  </Text>
+                  return (
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center'
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          position: 'relative',
+                          width: [128, 192],
+                          height: [128, 192],
+                          borderRadius: '10px',
+                          ":hover > #overlay": {
+                            opacity: 1
+                          },
+                        }}
+                      >
+                        <Image src={data.image} sx={{ width: '100%', height: '100%', borderRadius: "10px" }} />
+                      </Box>
 
-                  <Text
-                    sx={{
-                      fontSize: [0, 1],
-                      fontWeight: '700',
-                      textAlign: 'center'
-                    }}
-                  >
-                    {data.position}
-                  </Text>
-                </Box>
-              )
-            }
-          })}
-      </Grid>
+                      <Text
+                        sx={{
+                          fontSize: [1, 2],
+                          fontWeight: '700',
+                          mb: '0rem',
+                          color: 'white',
+                          textAlign: 'center'
+                        }}
+                      >
+                        {data.name}
+                      </Text>
+
+                      <Text
+                        sx={{
+                          fontSize: '0.9rem',
+                          fontWeight: '400',
+                          textAlign: 'center',
+                          color: 'rgba(255,255,255,0.8)',
+                          mt: '0'
+                        }}
+                      >
+                        {data.position}
+                      </Text>
+                    </Box>
+                  )
+                }
+              })}
+          </Grid>
+      </Container>
 
       <Box
         sx={{
@@ -119,48 +141,12 @@ const TeamPage = (props) => {
           mb: 4
         }}
       >
-        {/* <Text sx={ { variant: "styles.headerText", mb: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Erevna Board of Directors</Text>
-        <Text
-          sx={ { variant: "styles.bodyText", color: "secondary" } }
-        >
 
-        <Grid columns={[ 2, null, 4 ]}>
-          {teamData.map((item) => {
-              if (item.node.childMarkdownRemark) {
-                const data = item.node.childMarkdownRemark.frontmatter;
-
-                if(data.erevna) {
-                  return (
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        width: '100%'
-                      }}
-                    >
-                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{ color: 'slate' }}>{data.name}</a>
-                      <small style={{
-                        "fontWeight": "100",
-                        "fontSize": "12.5px",
-                        "display": "block"
-                      }}>{data.erevna}</small>
-                    </Box>
-                  )
-              }
-              } else {
-                return null;
-              }
-            })}
-        </Grid>
-      </Text> */}
-
-      <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Project Leads</Text>
+      <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center', cursor: 'pointer', display: 'flex' } } onClick={() => setProjectLeads(!projectLeads)}>Project Leads <span sx={{ fontSize: '0.4em', my: 'auto', ml: 3 }}>{projectLeads ? '▲' : '▼'}</span></Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
-
-        {/** width={[ 128, null, 192 ]} */}
-        <Grid columns={[ 2, null, 4 ]}>
+        <Grid columns={[ 2, null, 4 ]} sx={{ justifyItems: ['center', 'unset'], height: `${projectLeads ? 'unset' : '0px'}`, transform: `scaleY(${projectLeads ? '1' : '0'})` }}>
           {teamData.map((item) => {
               if (item.node.childMarkdownRemark) {
                 const data = item.node.childMarkdownRemark.frontmatter;
@@ -171,6 +157,8 @@ const TeamPage = (props) => {
                       sx={{
                         display: 'flex',
                         flexDirection: 'column',
+                        alignItems: 'center',
+                        textAlign: 'center',
                         width: '100%'
                       }}
                     >
@@ -189,13 +177,13 @@ const TeamPage = (props) => {
             })}
         </Grid>
       </Text>
-{/*    <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center'} }>Directors</Text>
+
+    <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center', cursor: 'pointer', display: 'flex'} } onClick={() => setDirector(!directors)}>Directors <span sx={{ fontSize: '0.4em', my: 'auto', ml: 3 }}>{directors ? '▲' : '▼'}</span></Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
-*/}
-      {/** width={[ 128, null, 192 ]} */}
-{/*      <Grid columns={[ 2, null, 4 ]}>
+
+      <Grid columns={[ 2, null, 4 ]} sx={{ height: `${directors ? 'unset' : '0px'}`, transform: `scaleY(${directors ? '1' : '0'})` }}>
         {teamData.map((item) => {
             if (item.node.childMarkdownRemark) {
               const data = item.node.childMarkdownRemark.frontmatter;
@@ -219,46 +207,13 @@ const TeamPage = (props) => {
             }
           })}
       </Grid>
-    </Text> */}
-
-{/*     <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Community Managers</Text>
-      <Text
-        sx={ { variant: "styles.bodyText", color: "secondary" } }
-      >
-*/}
-      {/** width={[ 128, null, 192 ]} */}
-{/*       <Grid columns={[ 2, null, 4 ]}>
-        {teamData.map((item) => {
-            if (item.node.childMarkdownRemark) {
-              const data = item.node.childMarkdownRemark.frontmatter;
-
-              if(data.community_manager) {
-                return (
-                  <Text>
-                    <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
-                        color: "secondary"
-                      }}>{data.name}</a>
-                    <small style={{
-                      "fontWeight": "100",
-                      "fontSize": "12.5px",
-                      "display": "block"
-                    }}>{data.community_manager}</small>
-                  </Text>
-                )
-            }
-            } else {
-              return null;
-            }
-          })}
-      </Grid>
-    </Text> */}
+    </Text>
 
      <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Advisors</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
 
-      {/** width={[ 128, null, 192 ]} */}
        <Grid columns={[ 2, null, 4 ]}>
         {teamData.map((item) => {
             if (item.node.childMarkdownRemark) {
@@ -285,60 +240,6 @@ const TeamPage = (props) => {
       </Grid>
     </Text>
     </Box>
-
-  
-
-      {/* <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Members</Text>
-      <Text
-        sx={ { variant: "styles.bodyText", color: "secondary" } }
-      >
-
-      <Grid columns={[ 2, null, 4 ]}>
-        {teamData.map((item) => {
-            if (item.node.childMarkdownRemark) {
-              const data = item.node.childMarkdownRemark.frontmatter;
-
-              if (!data.executive && !data.director && !data.lead) {
-                if (data.position || data.project) {
-                  return (
-                    <Text>
-                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
-                          color: "secondary"
-                        }}>{data.name}</a>
-
-                      <small style={{
-                        "fontWeight": "100",
-                        "fontSize": "12.5px",
-                        "display": "block"
-                      }}>
-                        {data.position || data.project}
-                      </small>
-                    </Text>
-                  )
-                }
-              }
-            }
-          })}
-
-          {teamData.map((item) => {
-              if (item.node.childMarkdownRemark) {
-                const data = item.node.childMarkdownRemark.frontmatter;
-
-                if(!data.executive && !data.erevna && !data.director && !data.lead && !data.community_manager) {
-                  if (!data.position && !data.project) {
-                    return (
-                      <Text>
-                        <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
-                            color: "secondary"
-                          }}>{data.name}</a>
-                      </Text>
-                    )
-                  }
-                }
-              }
-            })}
-      </Grid>
-    </Text> */}
   </Box>
 )};
 export default TeamPage;
