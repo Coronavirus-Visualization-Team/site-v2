@@ -2,7 +2,7 @@
 name: Benjamin Chen
 executive: false
 director: true
-lead: true
+lead: false
 community_manager:  
 erevna:  
 position: Student Advisory Board

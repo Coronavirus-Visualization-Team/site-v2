@@ -2,7 +2,7 @@
 name: Alia Abbas
 executive: false
 director: true
-lead: true
+lead: false
 community_manager: 
 erevna:  
 position: Coronavirus Visualization Podcast

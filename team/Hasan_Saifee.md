@@ -2,7 +2,7 @@
 name: Hasan Saifee
 executive: false
 director: false
-lead: true
+lead: false
 community_manager: Avoiding a COVID Depression
 erevna:  
 position:  

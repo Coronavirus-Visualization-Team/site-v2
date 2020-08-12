@@ -2,7 +2,7 @@
 name: Viraj Kacker
 executive: true
 director: false
-lead: true
+lead: false
 community_manager:  
 erevna: Secretary 
 position: Secretary

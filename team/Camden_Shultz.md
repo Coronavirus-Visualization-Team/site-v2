@@ -2,7 +2,7 @@
 name: Camden Shultz
 executive: false
 director: true
-lead: true
+lead: false
 community_manager:   
 erevna:  
 position: Projects Technical Stacks

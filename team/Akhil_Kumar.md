@@ -2,7 +2,7 @@
 name: Akhil Kumar
 executive: false
 director: true
-lead: true
+lead: false
 community_manager: COVID South Korea
 erevna:  
 position: Internal Affairs

@@ -2,11 +2,11 @@
 name: Alicia Loui
 executive: false
 director: false
-lead: false
+lead: true
 community_manager:  
 erevna:   
 position: 
-project: 211 Project
+project: Inequalities Projects
 image: ../assets/default_exec_image.png
 linkedin: 
 ---

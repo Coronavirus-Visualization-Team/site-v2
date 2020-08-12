@@ -2,11 +2,11 @@
 name: Regina Liu
 executive: false
 director: false
-lead: false
+lead: true
 community_manager: Time-Series Geospatial
 erevna:
 position: Research, Writing, Data Visualization
-project:  
+project:  Inequalities Projects
 image: ../assets/default_exec_image.png
 linkedin: 
 ---

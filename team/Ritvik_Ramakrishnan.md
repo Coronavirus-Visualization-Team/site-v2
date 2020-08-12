@@ -2,7 +2,7 @@
 name: Ritvik Ramakrishnan
 executive: true
 director: false
-lead: true
+lead: false
 community_manager:   
 erevna:
 position: Director of Outreach

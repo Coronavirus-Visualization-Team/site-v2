@@ -1,12 +1,12 @@
 ---
-name: Brandon Wong
+name: Catelyn Yam
 executive: false
 director: false
-lead: false
+lead: true
 community_manager: 
 erevna:    
 position:  
-project: Harvard OI Research
+project: COVID-19 Transparency 
 image: ../assets/default_exec_image.png
 linkedin: 
 ---

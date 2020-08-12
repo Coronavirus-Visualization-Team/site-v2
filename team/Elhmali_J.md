@@ -2,7 +2,7 @@
 name: Elhmali J
 executive: false
 director: false
-lead: true
+lead: false
 community_manager:   
 erevna:  
 position: External Affairs, Website

@@ -2,7 +2,7 @@
 name: Lakshay Sood
 executive: true
 director: false
-lead: true
+lead: false
 community_manager:   
 erevna:  
 position: Treasurer, Grants/Funding, Research, Data Viz

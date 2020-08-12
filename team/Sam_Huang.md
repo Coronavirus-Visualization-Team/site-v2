@@ -1,12 +1,12 @@
 ---
-name: Brandon Wong
+name: Sam Huang
 executive: false
 director: false
-lead: false
+lead: true
 community_manager: 
 erevna:    
 position:  
-project: Harvard OI Research
+project: Divergence of the Stock Market and Economy
 image: ../assets/default_exec_image.png
 linkedin: 
 ---

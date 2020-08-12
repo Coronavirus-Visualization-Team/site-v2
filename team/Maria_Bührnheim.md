@@ -1,12 +1,12 @@
 ---
-name: Brandon Wong
+name: Maria Bührnheim
 executive: false
 director: false
-lead: false
+lead: true
 community_manager: 
 erevna:    
 position:  
-project: Harvard OI Research
+project: Brazil
 image: ../assets/default_exec_image.png
 linkedin: 
 ---

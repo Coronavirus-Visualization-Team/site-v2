@@ -2,7 +2,7 @@
 name: Scott Blender
 executive: true
 director: false
-lead: true
+lead: false
 community_manager:  
 erevna: Executive Director (COO) 
 position: COO, HR, Operations, Social Media

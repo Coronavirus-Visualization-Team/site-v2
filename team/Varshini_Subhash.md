@@ -2,7 +2,7 @@
 name: Varshini Subhash
 executive: false
 director: true
-lead: true
+lead: false
 community_manager: Social Media
 erevna:
 position: Project Planning

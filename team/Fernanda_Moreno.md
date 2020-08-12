@@ -6,7 +6,7 @@ lead: true
 community_manager:   
 erevna:  
 position: 211 Project
-project: Website, Blog
+project: Website
 image: ../assets/default_exec_image.png
 linkedin: "https://www.linkedin.com/in/fernandamoreno99/"
 developer: true

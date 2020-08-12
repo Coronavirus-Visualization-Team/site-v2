@@ -2,11 +2,11 @@
 name: Emily Chang
 executive: false
 director: false
-lead: false
+lead: true
 community_manager:  
 erevna:   
 position:  
-project: CGA Projects, COVID South Korea
+project: Fact-Checking the EPA
 image: ../assets/default_exec_image.png
 linkedin: 
 ---

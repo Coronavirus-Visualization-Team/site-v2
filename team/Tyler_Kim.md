@@ -2,7 +2,7 @@
 name: Tyler Kim
 executive: false
 director: false
-lead: true
+lead: false
 community_manager:   
 erevna:
 position:  
