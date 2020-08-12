@@ -1,7 +1,7 @@
 ---
 slug: cga-projects
 title: CGA Visualization Projects
-featured: true
+featured: false
 image: ../../img/cga-ex.png
 label: Scott Blender
 templateKey: project
