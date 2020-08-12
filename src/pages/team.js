@@ -13,7 +13,7 @@ ReactGA.pageview('/team');
 const TeamPage = (props) => {
   const [projectLeads, setProjectLeads] = useState(false);
   const [directors, setDirector] = useState(false);
-  const [commManagers, setCommManagers] = useState(false);
+  const [advisors, setAdvisor] = useState(false);
 
   let teamData = props.data.team.edges;
   teamData = teamData.sort((x,y) => { return x.position == "undefined" ? -1 : y.position == "undefined" ? 1 : 0; });
@@ -190,16 +190,22 @@ const TeamPage = (props) => {
 
               if(data.director) {
                 return (
-                  <Text>
-                    <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
-                        color: "secondary"
-                      }}>{data.name}</a>
-                    <small style={{
-                      "fontWeight": "100",
-                      "fontSize": "12.5px",
-                      "display": "block"
-                    }}>{data.position}</small>
-                  </Text>
+                  <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    width: '100%'
+                  }}
+                >
+                  <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{ color: 'slate' }}>{data.name}</a>
+                  <small style={{
+                    "fontWeight": "100",
+                    "fontSize": "12.5px",
+                    "display": "block"
+                  }}>{data.project}</small>
+                </Box>
                 )
             }
             } else {
@@ -209,28 +215,34 @@ const TeamPage = (props) => {
       </Grid>
     </Text>
 
-     <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Advisors</Text>
+    <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center', cursor: 'pointer', display: 'flex'} } onClick={() => setAdvisor(!advisors)}>Advisors <span sx={{ fontSize: '0.4em', my: 'auto', ml: 3 }}>{advisors ? '▲' : '▼'}</span></Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
 
-       <Grid columns={[ 2, null, 4 ]}>
+<Grid columns={[ 2, null, 4 ]} sx={{ height: `${advisors ? 'unset' : '0px'}`, transform: `scaleY(${advisors ? '1' : '0'})` }}>
         {teamData.map((item) => {
             if (item.node.childMarkdownRemark) {
               const data = item.node.childMarkdownRemark.frontmatter;
 
               if(data.advisor) {
                 return (
-                  <Text>
-                    <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
-                        color: "secondary"
-                      }}>{data.name}</a>
-                    <small style={{
-                      "fontWeight": "100",
-                      "fontSize": "12.5px",
-                      "display": "block"
-                    }}>{data.initiative}</small>
-                  </Text>
+                  <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    width: '100%'
+                  }}
+                >
+                  <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{ color: 'slate' }}>{data.name}</a>
+                  <small style={{
+                    "fontWeight": "100",
+                    "fontSize": "12.5px",
+                    "display": "block"
+                  }}>{data.initiative}</small>
+                </Box>
                 )
             }
             } else {
