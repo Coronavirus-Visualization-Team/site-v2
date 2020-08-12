@@ -4,7 +4,9 @@ executive: true
 director: false
 lead: false
 community_manager:   
-erevna:  
+erevna:
+advisor: true
+initiative: Coronavirus Visualization Team 
 position: President of Advisory Board
 project:  
 image: /assets/91d74ba6-1911-4384-9fe0-8c1e331ba358.png

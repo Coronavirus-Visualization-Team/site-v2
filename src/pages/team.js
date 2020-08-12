@@ -189,13 +189,13 @@ const TeamPage = (props) => {
             })}
         </Grid>
       </Text>
-    <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center'} }>Directors</Text>
+{/*    <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center'} }>Directors</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
-
+*/}
       {/** width={[ 128, null, 192 ]} */}
-      <Grid columns={[ 2, null, 4 ]}>
+{/*      <Grid columns={[ 2, null, 4 ]}>
         {teamData.map((item) => {
             if (item.node.childMarkdownRemark) {
               const data = item.node.childMarkdownRemark.frontmatter;
@@ -219,15 +219,15 @@ const TeamPage = (props) => {
             }
           })}
       </Grid>
-    </Text>
+    </Text> */}
 
-    <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Community Managers</Text>
+{/*     <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Community Managers</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
-
+*/}
       {/** width={[ 128, null, 192 ]} */}
-      <Grid columns={[ 2, null, 4 ]}>
+{/*       <Grid columns={[ 2, null, 4 ]}>
         {teamData.map((item) => {
             if (item.node.childMarkdownRemark) {
               const data = item.node.childMarkdownRemark.frontmatter;
@@ -251,9 +251,39 @@ const TeamPage = (props) => {
             }
           })}
       </Grid>
+    </Text> */}
+
+     <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Advisors</Text>
+      <Text
+        sx={ { variant: "styles.bodyText", color: "secondary" } }
+      >
+
+      {/** width={[ 128, null, 192 ]} */}
+       <Grid columns={[ 2, null, 4 ]}>
+        {teamData.map((item) => {
+            if (item.node.childMarkdownRemark) {
+              const data = item.node.childMarkdownRemark.frontmatter;
+
+              if(data.advisor) {
+                return (
+                  <Text>
+                    <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{
+                        color: "secondary"
+                      }}>{data.name}</a>
+                    <small style={{
+                      "fontWeight": "100",
+                      "fontSize": "12.5px",
+                      "display": "block"
+                    }}>{data.initiative}</small>
+                  </Text>
+                )
+            }
+            } else {
+              return null;
+            }
+          })}
+      </Grid>
     </Text>
-
-
     </Box>
 
   
@@ -327,6 +357,8 @@ query {
             erevna
             director
             lead
+            advisor
+            initiative
             community_manager
             position
             project
