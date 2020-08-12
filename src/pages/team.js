@@ -119,12 +119,11 @@ const TeamPage = (props) => {
           mb: 4
         }}
       >
-        <Text sx={ { variant: "styles.headerText", mb: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Erevna Board of Directors</Text>
+        {/* <Text sx={ { variant: "styles.headerText", mb: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Erevna Board of Directors</Text>
         <Text
           sx={ { variant: "styles.bodyText", color: "secondary" } }
         >
 
-        {/** width={[ 128, null, 192 ]} */}
         <Grid columns={[ 2, null, 4 ]}>
           {teamData.map((item) => {
               if (item.node.childMarkdownRemark) {
@@ -153,7 +152,7 @@ const TeamPage = (props) => {
               }
             })}
         </Grid>
-      </Text>
+      </Text> */}
 
       <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Project Leads</Text>
       <Text
@@ -190,9 +189,7 @@ const TeamPage = (props) => {
             })}
         </Grid>
       </Text>
-    </Box>
-
-      <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Directors</Text>
+    <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center'} }>Directors</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
@@ -224,7 +221,7 @@ const TeamPage = (props) => {
       </Grid>
     </Text>
 
-    <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Community Managers</Text>
+    <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center' } }>Community Managers</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
@@ -257,12 +254,15 @@ const TeamPage = (props) => {
     </Text>
 
 
-      <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Members</Text>
+    </Box>
+
+  
+
+      {/* <Text sx={ { variant: "styles.headerText", mb: 4, color: "grey" } }>Members</Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
       >
 
-      {/** width={[ 128, null, 192 ]} */}
       <Grid columns={[ 2, null, 4 ]}>
         {teamData.map((item) => {
             if (item.node.childMarkdownRemark) {
@@ -308,7 +308,7 @@ const TeamPage = (props) => {
               }
             })}
       </Grid>
-    </Text>
+    </Text> */}
   </Box>
 )};
 export default TeamPage;
