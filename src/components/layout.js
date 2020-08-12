@@ -14,7 +14,6 @@ import {
 } from "theme-ui"
 import { Link, useStaticQuery } from "gatsby"
 import { useLocation } from '@reach/router'
-import favicon from "../../static/assets/favicon.ico"
 import LogoIconOnly from "./cvt-new-logo.png";
 import LogoWithText from "./cvt-logo-full-text.png";
 import { Helmet } from "react-helmet"
@@ -22,6 +21,7 @@ import TwitterLogo from "./social-icons/Twitter.png"
 import InstagramLogo from "./social-icons/Instagram.png"
 import MediumLogo from "./social-icons/Medium.png"
 import FacebookLogo from "./social-icons/Facebook-Icon-White.png"
+import './index.css';
 
 import SEO from "../components/seo";
 
@@ -55,6 +55,7 @@ export const Header = () => {
       <SEO />
       <Helmet>
         <link rel="icon" href={LogoIconOnly} />
+        <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap" rel="stylesheet"></link>
       </Helmet>
       <Link to="/">
         <Image
@@ -196,338 +197,369 @@ export const Header = () => {
 }
 
 export const Footer = () => {
+  const location = useLocation();
+  const [dividerShown, setDividerShown] = useState(true);
+
+  useEffect(() => {
+    if(location.pathname === '/') {
+      setDividerShown(false);
+    }
+    else {
+      setDividerShown(true);
+    }
+  }, [location]);
+
   return (
     <Box
-      as="footer"
       sx={{
         display: 'flex',
-        flexDirection: ['column', 'row'],
-        flexWrap: 'wrap',
-        py: 4,
-        mt: '2vh',
-        zIndex: 10,
-        position: "relative",
+        flexDirection: 'column',
+        px: ["3%", "5%"]
       }}
     >
+      {dividerShown ?
       <Box
         sx={{
-          flex: '1.5',
-          display: 'flex',
-          flexDirection: 'column',
+          width: '100%',
+          height: '1px',
+          bg: '#00af8d',
+          mt: 5
         }}
       >
-        <Text
+      </Box> : null}
+
+      <Box
+        as="footer"
+        sx={{
+          display: 'flex',
+          flexDirection: ['column', 'row'],
+          flexWrap: 'wrap',
+          py: 4,
+          mt: 4,
+          zIndex: 10,
+          position: "relative",
+        }}
+      >
+        <Box
           sx={{
-            fontSize: [2, 3],
-            color: "primary",
+            flex: '1.5',
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
-          Stay Updated!
-        </Text>
+          <Text
+            sx={{
+              fontSize: [2, 3],
+              color: "primary",
+            }}
+          >
+            Stay Updated!
+          </Text>
+
+          <Box
+            as="form"
+            action="https://harvard.us19.list-manage.com/subscribe/post"
+            method="POST"
+            sx={{
+              flex: '1',
+              display: 'flex',
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              mt: 3,
+            }}
+          >
+            {/** Mailchimp Identifiers */}
+            <Input type="hidden" name="u" value="296f4b87de1255e43330d3eed" />
+            <Input type="hidden" name="id" value="fd200b5e7b" />
+          
+            <Input
+              placeholder="First Name"
+              name="MERGE1"
+              id="MERGE1"
+              sx={{
+                color: "secondary",
+                borderRadius: "20px",
+                border: 'none',
+                mt: 3,
+                mr: '2%',
+                p: '0.75em',
+                boxShadow: '0px 0px 10px #D2D2D2',
+                width: '36%',
+              }}
+            />
+
+            <Input
+              placeholder="Last Name"
+              name="MERGE2"
+              id="MERGE2"
+              sx={{
+                color: "secondary",
+                borderRadius: "20px",
+                border: 'none',
+                mt: 3,
+                p: '0.75em',
+                boxShadow: '0px 0px 10px #D2D2D2',
+                width: '36%',
+              }}
+            />
+
+            <Input
+              placeholder="Email"
+              name="MERGE0"
+              id="MERGE0"
+              sx={{
+                color: "secondary",
+                borderRadius: "20px",
+                border: 'none',
+                mt: 3,
+                p: '0.75em',
+                boxShadow: '0px 0px 10px #D2D2D2',
+                width: '74%',
+              }}
+            />
+
+            <Button
+              type="submit"
+              sx={{
+                minHeight: '50px',
+                fontSize: [14, 16],
+                p: '0.75em',
+                mt: 3,
+                ml: 2,
+                bg: "green",
+                borderRadius: "button",
+                boxShadow: "0px 0px 10px #D2D2D2",
+                flex: "1",
+                cursor: 'pointer'
+              }}
+            >
+              Subscribe
+            </Button>
+          </Box>
+          
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center'
+            }}
+          >
+            <Image
+              sx={{
+                mt: 4,
+              }}
+              src={LogoWithText}
+            />
+
+            <Button
+              as="a"
+              href="https://bank.hackclub.com/donations/start/coronavirus-visualization-team"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                fontSize: [14, 16],
+                p: '0.75em',
+                px: ['1.6em', '1.75em'],
+                mt: 4,
+                ml: 3,
+                bg: "blue",
+                borderRadius: "button",
+                boxShadow: "0px 0px 10px #D2D2D2",
+                whiteSpace: 'nowrap'
+              }}
+            >
+              Donate &#187;
+            </Button>
+          </Box>
+        </Box>
 
         <Box
-          as="form"
-          action="https://harvard.us19.list-manage.com/subscribe/post"
-          method="POST"
           sx={{
             flex: '1',
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            mt: 3,
-          }}
-        >
-          {/** Mailchimp Identifiers */}
-          <Input type="hidden" name="u" value="296f4b87de1255e43330d3eed" />
-          <Input type="hidden" name="id" value="fd200b5e7b" />
-        
-          <Input
-            placeholder="First Name"
-            name="MERGE1"
-            id="MERGE1"
-            sx={{
-              color: "secondary",
-              borderRadius: "20px",
-              border: 'none',
-              mt: 3,
-              mr: '2%',
-              p: '0.75em',
-              boxShadow: '0px 0px 10px #D2D2D2',
-              width: '36%',
-            }}
-          />
-
-          <Input
-            placeholder="Last Name"
-            name="MERGE2"
-            id="MERGE2"
-            sx={{
-              color: "secondary",
-              borderRadius: "20px",
-              border: 'none',
-              mt: 3,
-              p: '0.75em',
-              boxShadow: '0px 0px 10px #D2D2D2',
-              width: '36%',
-            }}
-          />
-
-          <Input
-            placeholder="Email"
-            name="MERGE0"
-            id="MERGE0"
-            sx={{
-              color: "secondary",
-              borderRadius: "20px",
-              border: 'none',
-              mt: 3,
-              p: '0.75em',
-              boxShadow: '0px 0px 10px #D2D2D2',
-              width: '74%',
-            }}
-          />
-
-          <Button
-            type="submit"
-            sx={{
-              minHeight: '50px',
-              fontSize: [14, 16],
-              p: '0.75em',
-              mt: 3,
-              ml: 2,
-              bg: "green",
-              borderRadius: "button",
-              boxShadow: "0px 0px 10px #D2D2D2",
-              flex: "1",
-              cursor: 'pointer'
-            }}
-          >
-            Subscribe
-          </Button>
-        </Box>
-        
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center'
-          }}
-        >
-          <Image
-            sx={{
-              mt: 4,
-            }}
-            src={LogoWithText}
-          />
-
-          <Button
-            as="a"
-            href="https://bank.hackclub.com/donations/start/coronavirus-visualization-team"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-              fontSize: [14, 16],
-              p: '0.75em',
-              px: ['1.6em', '1.75em'],
-              mt: 4,
-              ml: 3,
-              bg: "blue",
-              borderRadius: "button",
-              boxShadow: "0px 0px 10px #D2D2D2",
-              whiteSpace: 'nowrap'
-            }}
-          >
-            Donate &#187;
-          </Button>
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
-          flex: '1',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-      >
-        <Box
-          sx={{
-            ml: 'auto',
-            maxWidth: ['100%', '90%'],
-            mt: [5, 0],
-            height: '100%',
             display: 'flex',
             flexDirection: 'column'
           }}
         >
           <Box
             sx={{
+              ml: 'auto',
+              maxWidth: ['100%', '90%'],
+              mt: [5, 0],
+              height: '100%',
               display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center'
+              flexDirection: 'column'
             }}
           >
-            <Button
-              as="a"
-              href="https://facebook.com/joincvt"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Box
               sx={{
-                background: 'none',
-                mr: 4,
-                p: 0
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center'
               }}
             >
-              <Image
+              <Button
+                as="a"
+                href="https://facebook.com/joincvt"
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  filter: 'brightness(0)',
-                  width: '40px',
+                  background: 'none',
+                  mr: 4,
+                  p: 0
                 }}
-                src={FacebookLogo}
-              />
-            </Button>
+              >
+                <Image
+                  sx={{
+                    filter: 'brightness(0)',
+                    width: '40px',
+                  }}
+                  src={FacebookLogo}
+                />
+              </Button>
 
-            <Button
-              as="a"
-              href="https://instagram.com/joincvt"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                background: 'none',
-                mr: 4,
-                p: 0
-              }}
-            >
-              <Image
+              <Button
+                as="a"
+                href="https://instagram.com/joincvt"
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  filter: 'brightness(0)',
-                  width: '40px',
+                  background: 'none',
+                  mr: 4,
+                  p: 0
                 }}
-                src={InstagramLogo}
-              />
-            </Button>
+              >
+                <Image
+                  sx={{
+                    filter: 'brightness(0)',
+                    width: '40px',
+                  }}
+                  src={InstagramLogo}
+                />
+              </Button>
 
-            <Button
-              as="a"
-              href="https://twitter.com/joincvt"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                background: 'none',
-                mr: 4,
-                p: 0
-              }}
-            >
-              <Image
+              <Button
+                as="a"
+                href="https://twitter.com/joincvt"
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  filter: 'brightness(0)',
-                  width: '40px',
+                  background: 'none',
+                  mr: 4,
+                  p: 0
                 }}
-                src={TwitterLogo}
-              />
-            </Button>
+              >
+                <Image
+                  sx={{
+                    filter: 'brightness(0)',
+                    width: '40px',
+                  }}
+                  src={TwitterLogo}
+                />
+              </Button>
 
-            <Button
-              as="a"
-              href="https://medium.com/coronavirus-visualization-team"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                background: 'none',
-                mr: 4,
-                p: 0
-              }}
-            >
-              <Image
+              <Button
+                as="a"
+                href="https://medium.com/coronavirus-visualization-team"
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{
-                  filter: 'brightness(0)',
-                  width: '40px',
+                  background: 'none',
+                  mr: 4,
+                  p: 0
                 }}
-                src={MediumLogo}
-              />
-            </Button>
-          </Box>
-
-          <Text
-            sx={{
-              fontWeight: '700',
-              color: 'black',
-              mt: 3
-            }}
-          >
-            Other Platforms
-          </Text>
-
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center'
-            }}
-          >
-            <Text
-              as="a"
-              href="https://www.linkedin.com/company/covid-visualization-team/"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                color: 'slate',
-                mr: 3
-              }}
-            >
-              LinkedIn
-            </Text>
+              >
+                <Image
+                  sx={{
+                    filter: 'brightness(0)',
+                    width: '40px',
+                  }}
+                  src={MediumLogo}
+                />
+              </Button>
+            </Box>
 
             <Text
-              as="a"
-              href="https://github.com/coronavirus-Visualization-Team"
-              target="_blank"
-              rel="noopener noreferrer"
               sx={{
-                color: 'slate',
-                mr: 3
+                fontWeight: '700',
+                color: 'black',
+                mt: 3
               }}
             >
-              GitHub
+              Other Platforms
             </Text>
+
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center'
+              }}
+            >
+              <Text
+                as="a"
+                href="https://www.linkedin.com/company/covid-visualization-team/"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: 'slate',
+                  mr: 3
+                }}
+              >
+                LinkedIn
+              </Text>
+
+              <Text
+                as="a"
+                href="https://github.com/coronavirus-Visualization-Team"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: 'slate',
+                  mr: 3
+                }}
+              >
+                GitHub
+              </Text>
+
+              <Text
+                as="a"
+                href="https://open.spotify.com/show/5SuhWvQ6JmwCbL5YPaHWIE?go=1&utm_source=embed_v3&t=0&nd=1&nd=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  color: 'slate',
+                }}
+              >
+                Spotify
+              </Text>
+            </Box>
 
             <Text
-              as="a"
-              href="https://open.spotify.com/show/5SuhWvQ6JmwCbL5YPaHWIE?go=1&utm_source=embed_v3&t=0&nd=1&nd=1"
-              target="_blank"
-              rel="noopener noreferrer"
               sx={{
-                color: 'slate',
+                mt: 'auto'
               }}
             >
-              Spotify
+              &copy; 2020 <span sx={{ color: 'green', fontWeight: '700' }}>Coronavirus Visualization Team</span>. All rights reserved.
             </Text>
-          </Box>
 
-          <Text
-            sx={{
-              mt: 'auto'
-            }}
-          >
-            &copy; 2020 <span sx={{ color: 'green', fontWeight: '700' }}>Coronavirus Visualization Team</span>. All rights reserved.
-          </Text>
-
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignItems: 'center',
-              mt: 2
-            }}
-          >
-            <Link
-              to="/privacy"
+            <Box
               sx={{
-                color: 'slate',
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                mt: 2
               }}
             >
-              Privacy Policy
-            </Link>
+              <Link
+                to="/privacy"
+                sx={{
+                  color: 'slate',
+                }}
+              >
+                Privacy Policy
+              </Link>
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -536,7 +568,7 @@ export const Footer = () => {
 }
 
 export default ({ children }) => (
-  <Container sx={{ maxWidth: "xl", margin: "auto", px: 3 }}>
+  <Container sx={{ maxWidth: "100%", margin: "auto", px: 3 }}>
     <Header />
     {children}
     <Footer />

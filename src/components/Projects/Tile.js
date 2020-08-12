@@ -9,7 +9,6 @@ const Tile = ({ title, img, slug }) => {
         onClick = {() => window.location.href = `/projects/${slug}`}
         sx = {{
             width: '100%',
-            height: ['fit-content', '300px'],
             boxShadow: 'base',
             bg: 'white',
             p: [3,4],
@@ -30,7 +29,7 @@ const Tile = ({ title, img, slug }) => {
             <Image src = {img}
                     sx = {{
                         width: ['350px', '100%'],
-                        height: ['210px', '250px'],
+                        height: ['210px', 'unset'],
                         borderRadius: 'tile',
                         boxShadow: `${colorMode === "dark" ? "0 3px 6px rgba(255,255,255,0.14), 0 3px 6px rgba(255,255,255,0.18)" : "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"}`,
                         ml: [0, '10px'],
