@@ -204,7 +204,7 @@ export const Footer = () => {
         flexDirection: ['column', 'row'],
         flexWrap: 'wrap',
         py: 4,
-        mt: 4,
+        mt: '2vh',
         zIndex: 10,
         position: "relative",
       }}
