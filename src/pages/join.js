@@ -122,12 +122,12 @@ const JoinPage = props => {
       <Text sx={{ variant: "styles.subHeader", py: 15, mb: 2, color: "primary" }}>
         We’re also partnered with these organizations:{" "}
       </Text>
-      <Grid width={["18%"]} gap={["2%"]} sx={{
+      <Grid width={["20%"]} gap={["6%"]} sx={{
           backgroundColor: "white",
           borderRadius: "5px",
           boxShadow: colorMode === "dark" ? "0 0 16px rgba(255, 255, 255, 0.3)" : "none",
           padding: 3,
-          pb: "4em"
+          pb: "10em"
       }}>
         {partnersData.map(item => {
           const data = item.node.childMarkdownRemark.frontmatter
