@@ -178,43 +178,6 @@ const TeamPage = (props) => {
         </Grid>
       </Text>
 
-    <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center', cursor: 'pointer', display: 'flex'} } onClick={() => setDirector(!directors)}>Directors <span sx={{ fontSize: '0.4em', my: 'auto', ml: 3 }}>{directors ? '▲' : '▼'}</span></Text>
-      <Text
-        sx={ { variant: "styles.bodyText", color: "secondary" } }
-      >
-
-      <Grid columns={[ 2, null, 4 ]} sx={{ height: `${directors ? 'unset' : '0px'}`, transform: `scaleY(${directors ? '1' : '0'})` }}>
-        {teamData.map((item) => {
-            if (item.node.childMarkdownRemark) {
-              const data = item.node.childMarkdownRemark.frontmatter;
-
-              if(data.director) {
-                return (
-                  <Box
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    width: '100%'
-                  }}
-                >
-                  <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{ color: 'slate' }}>{data.name}</a>
-                  <small style={{
-                    "fontWeight": "100",
-                    "fontSize": "12.5px",
-                    "display": "block"
-                  }}>{data.project}</small>
-                </Box>
-                )
-            }
-            } else {
-              return null;
-            }
-          })}
-      </Grid>
-    </Text>
-
     <Text sx={ { variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center', cursor: 'pointer', display: 'flex'} } onClick={() => setAdvisor(!advisors)}>Advisors <span sx={{ fontSize: '0.4em', my: 'auto', ml: 3 }}>{advisors ? '▲' : '▼'}</span></Text>
       <Text
         sx={ { variant: "styles.bodyText", color: "secondary" } }
