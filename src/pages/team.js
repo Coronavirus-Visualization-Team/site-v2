@@ -15,6 +15,7 @@ const TeamPage = (props) => {
   const [directors, setDirector] = useState(false);
   const [advisors, setAdvisor] = useState(false);
   const [developers, setDeveloper] = useState(false);
+  const [PMs, setPM] = useState(false);
 
   let teamData = props.data.team.edges;
   teamData = teamData.sort((x, y) => { return x.position == "undefined" ? -1 : y.position == "undefined" ? 1 : 0; });
@@ -142,6 +143,42 @@ const TeamPage = (props) => {
           mb: 4
         }}
       >
+ <Text sx={{ variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center', cursor: 'pointer', display: 'flex' }} onClick={() => setPM(!PMs)}>Project Managers <span sx={{ fontSize: '0.4em', my: 'auto', ml: 3 }}>{PMs ? '▲' : '▼'}</span></Text>
+        <Text
+          sx={{ variant: "styles.bodyText", color: "secondary" }}
+        >
+
+          <Grid columns={[2, null, 4]} sx={{ height: `${PMs ? 'unset' : '0px'}`, transform: `scaleY(${PMs ? '1' : '0'})` }}>
+            {teamData.map((item) => {
+              if (item.node.childMarkdownRemark) {
+                const data = item.node.childMarkdownRemark.frontmatter;
+
+                if (data.pm) {
+                  return (
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        textAlign: 'center',
+                        width: '100%'
+                      }}
+                    >
+                      <a href={data.linkedin} target="_blank" rel="noopener noreferrer" sx={{ color: 'slate' }}>{data.name}</a>
+                      <small style={{
+                        "fontWeight": "100",
+                        "fontSize": "12.5px",
+                        "display": "block"
+                      }}>{data.erevna_team}</small>
+                    </Box>
+                  )
+                }
+              } else {
+                return null;
+              }
+            })}
+          </Grid>
+        </Text>
 
         <Text sx={{ variant: "styles.headerText", mb: 4, mt: 4, alignSelf: 'center', paddingTop: '10px !important', fontWeight: '700', textAlign: 'center', cursor: 'pointer', display: 'flex' }} onClick={() => setProjectLeads(!projectLeads)}>Project Leads <span sx={{ fontSize: '0.4em', my: 'auto', ml: 3 }}>{projectLeads ? '▲' : '▼'}</span></Text>
         <Text
@@ -266,6 +303,8 @@ query {
           frontmatter {
             name
             executive
+            pm
+            erevna_team
             erevna
             director
             lead

@@ -5,6 +5,8 @@ director: false
 lead: false
 community_manager: 
 erevna:  
+pm: true
+erevna_team: Design
 position: 
 project: Social Media, Advisory Board, Genomic Surveillance
 image: ../assets/default_exec_image.png

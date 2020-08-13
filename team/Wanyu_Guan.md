@@ -8,6 +8,6 @@ erevna:
 position: Website
 project:  
 image: ../assets/default_exec_image.png
-linkedin: 
+linkedin: "https://www.linkedin.com/in/wanyuguan"
 developer: true
 ---
