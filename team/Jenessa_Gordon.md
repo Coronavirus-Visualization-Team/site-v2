@@ -1,14 +1,14 @@
 ---
-name: Mandy Yuan
+name: Jenessa Gordon
 executive: false
 director: false
 lead: false
-community_manager:   
-erevna:  
-pm: true 
-erevna_team: Design
+community_manager:  
+erevna:   
+pm: true
+erevna_team: Funding
 position:  
-project: Design, Advisory Board, GBV
+project:  
 image: ../assets/default_exec_image.png
 linkedin: 
 ---

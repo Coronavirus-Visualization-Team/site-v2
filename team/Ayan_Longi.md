@@ -4,7 +4,9 @@ executive: false
 director: false
 lead: false
 community_manager: 
-erevna:    
+erevna: 
+pm: true
+erevna_team: Project Planning/ Management 
 position:  
 project: CVT x Helpful Engineering
 image: ../assets/default_exec_image.png

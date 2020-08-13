@@ -5,6 +5,8 @@ director: false
 lead: true
 community_manager:   
 erevna:  
+pm: true
+erevna_team: Development
 position: 211 Project
 project: Website
 image: ../assets/default_exec_image.png
