@@ -1,11 +1,11 @@
 ---
-name: Lakshay Sood
+name: Divita Pandita
 executive: true
 director: false
 lead: false
 community_manager: 
 erevna:
-position: Funding
+position: 
 project:  
 image: ../assets/default_exec_image.png
 linkedin: 

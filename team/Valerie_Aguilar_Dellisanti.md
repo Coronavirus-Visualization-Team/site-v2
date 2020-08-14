@@ -1,12 +1,12 @@
 ---
 name: Valerie Aguilar Dellisanti
-executive: false
-director: true
+executive: true
+director: false
 lead: false
 community_manager:   
 erevna:
 position:  Partnerships
 project: 
-image: ../assets/default_exec_image.png
+image: ../assets/valerie.png
 linkedin: "https://www.linkedin.com/in/valerie-aguilar-dellisanti/"
 ---

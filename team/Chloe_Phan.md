@@ -1,6 +1,6 @@
 ---
 name: Chloe Phan
-executive: false
+executive: true
 director: true
 lead: false
 community_manager: 

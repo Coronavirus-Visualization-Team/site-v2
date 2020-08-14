@@ -1,7 +1,7 @@
 ---
 name: Zubair Akram
-executive: false
-director: true
+executive: true
+director: false
 lead: false
 community_manager: Recruiting
 erevna:

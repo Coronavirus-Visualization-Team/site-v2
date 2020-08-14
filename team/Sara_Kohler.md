@@ -1,7 +1,7 @@
 ---
 name: Sara Kohler
-executive: false
-director: true
+executive: true
+director: false
 lead: false
 community_manager:   
 erevna:

@@ -1,12 +1,12 @@
 ---
 name: Zain Kalson
-executive: false
-director: true
+executive: true
+director: false
 lead: false
 community_manager: Fact Checking the EPA
 erevna:
-position: Community Management
+position: Onboarding
 project:  
-image: ../assets/default_exec_image.png
+image: ../assets/zain.png
 linkedin: "https://www.linkedin.com/in/zainkalson/"
 ---
