@@ -1,11 +1,14 @@
 ---
-path: testing13
-date: 2020-04-25T00:28:54.933Z
+# path: testing13
+# date: 2020-04-25T00:28:54.933Z
 slug: covid-spread
 title: Why is COVID-19 spreading faster in certain areas?
 featured: false
 image: ../../img/spread.png
 label: Vox
 templateKey: project
+link:
+linkTitle:
+linkTarget:
 ---
 The goal of this project is to track certain factors that contribute to the faster spread of COVID-19 in certain regions. The end goal of this project would be to publish a paper explaining the correlatory variables and also host a dashboard/data repository.
