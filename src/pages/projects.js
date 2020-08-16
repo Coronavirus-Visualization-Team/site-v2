@@ -256,7 +256,7 @@ const Projects = ({ data }) => {
         }}
       >
         {vizPosts && (
-          <Box sx={{display: "flex", flexDirection: "column", width:["100%", "45%"], alignItems: 'top', float: 'left', overflowY: "hidden", overflowX: "visible", px: '40px', py: 3, bg: '#ccfff5'}}>
+          <Box sx={{display: "flex", flexDirection: "column", width:["100%", "45%"], alignItems: 'top', float: 'left', overflowY: "hidden", overflowX: "visible", px: '40px', py: 3, bg: '#ffffff'}}>
             <Text sx={ { variant: "styles.headerText", mb: 4, pt: "0 !important", color: "black", textAlign: "center", fontWeight: '700' } }>Visualizations</Text>
 
             <Box sx={{
@@ -287,7 +287,7 @@ const Projects = ({ data }) => {
 
         </Box>
 
-        <Box sx={{display: "flex", flexDirection: "column", width:["100%", "45%"], alignItems: 'top', float: 'right', overflowY: "hidden", overflowX: "visible", px: '40px', py: 3, bg: '#c5e1ff'}}>
+        <Box sx={{display: "flex", flexDirection: "column", width:["100%", "45%"], alignItems: 'top', float: 'right', overflowY: "hidden", overflowX: "visible", px: '40px', py: 3, bg: "#ffffff"}}>
           <Text sx={ { variant: "styles.headerText", mb: 4, pt: "0 !important", color: "black", textAlign: "center", fontWeight: '700' } }>More Projects</Text>
 
           <Box sx={{
@@ -333,13 +333,11 @@ export default () => (
               html
               id
               frontmatter {
-                path
                 slug
                 title
                 featured
                 image
                 label
-                date(formatString: "MMMM DD, YYYY")
               }
             }
           }
