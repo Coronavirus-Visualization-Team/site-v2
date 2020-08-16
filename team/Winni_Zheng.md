@@ -1,12 +1,12 @@
 ---
 name: Winni Zheng
-executive: false
-director: true
+executive: true
+director: false
 lead: false
 community_manager:   
 erevna:
-position: Community Engagement
+position: Social Media, Community Engagement
 project:  
-image: ../assets/default_exec_image.png
+image: ../assets/winni.png
 linkedin: "https://www.linkedin.com/in/winni-z-3aa300175/"
 ---

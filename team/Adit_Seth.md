@@ -1,6 +1,6 @@
 ---
 name: Adit Seth
-executive: false
+executive: true
 director: false
 lead: false
 community_manager:   

@@ -1,12 +1,12 @@
 ---
 name: Kira Zizzo
-executive: false
+executive: true
 director: true
 lead: false
 community_manager:  
 erevna:   
-position: Press Releases
+position: Public Relations
 project:
-image: ../assets/default_exec_image.png
+image: ../assets/kira.png
 linkedin: "https://www.linkedin.com/in/kira-zizzo-0498521aa/"
 ---

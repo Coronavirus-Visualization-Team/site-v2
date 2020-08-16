@@ -1,12 +1,12 @@
 ---
 name: Varshini Subhash
-executive: false
-director: true
+executive: true
+director: false
 lead: false
 community_manager: Social Media
 erevna:
 position: Project Planning
 project: Gender-based Violence
-image: ../assets/default_exec_image.png
+image: ../assets/varshini.png
 linkedin: "https://www.linkedin.com/in/varshini-subhash-144882118/"
 ---
