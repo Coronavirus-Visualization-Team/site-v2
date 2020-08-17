@@ -5,8 +5,8 @@ director: true
 lead: false
 community_manager: COVID South Korea
 erevna:  
-position: Internal Affairs
+position: CVC & Education
 project: 3D Printer and Hospital Map
-image: ../assets/default_exec_image.png
+image: ../assets/akhil.png
 linkedin: "http://linkedin.com/in/akhil-kumar28"
 ---
