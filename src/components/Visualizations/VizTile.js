@@ -15,7 +15,7 @@ const VizTile = ({ title, img, slug, link, linkTarget }) => {
             borderRadius: 'tile',
             color: 'primary',
             mb: "5.5em",
-            backgroundColor: "secondaryBackground"
+            backgroundColor: "white"
 
         }}>
             <Text

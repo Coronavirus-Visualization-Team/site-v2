@@ -252,12 +252,12 @@ const Projects = ({ data }) => {
           maxHeight: "800px",
           maxWidth: '100% !important',
           mx: '0 !important',
-          px: '5%'
+          px: '5%',
         }}
       >
         {vizPosts && (
           <Box sx={{display: "flex", flexDirection: "column", width:["100%", "45%"], alignItems: 'top', float: 'left', overflowY: "hidden", overflowX: "visible", px: '40px', py: 3, bg: '#ccfff5'}}>
-            <Text sx={ { variant: "styles.headerText", mb: 4, pt: "0 !important", color: "black", textAlign: "center", fontWeight: '700' } }>Visualizations</Text>
+            <Text sx={ { variant: "styles.headerText", mb: 4, pt: "0 !important", color: "black", textAlign: "center", fontWeight: '700'} }>Visualizations</Text>
 
             <Box sx={{
               display: "flex",
@@ -270,7 +270,7 @@ const Projects = ({ data }) => {
                 link= {post.childMarkdownRemark.frontmatter.link}
                 title={post.childMarkdownRemark.frontmatter.name}
                 img={post.childMarkdownRemark.frontmatter.image}
-                linkTarget={post.childMarkdownRemark.frontmatter.linkTarget} >
+                linkTarget={post.childMarkdownRemark.frontmatter.linkTarget}>
                 </VizTile>
               })}
             </Box>
@@ -300,13 +300,13 @@ const Projects = ({ data }) => {
               return <Tile
               slug={post.frontmatter.slug}
               title={post.frontmatter.title}
-              img={post.frontmatter.image} >
+              img={post.frontmatter.image}
+              >
               </Tile>
             })}
           </Box>
         </Box>
       </Container>
-     
     </>
   )
 }
@@ -333,13 +333,11 @@ export default () => (
               html
               id
               frontmatter {
-                path
                 slug
                 title
                 featured
                 image
                 label
-                date(formatString: "MMMM DD, YYYY")
               }
             }
           }
