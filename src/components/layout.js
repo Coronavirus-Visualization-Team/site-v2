@@ -81,13 +81,13 @@ export const Header = () => {
       }}>
         <div sx={{ ml: 'auto !important' }} />
         <Link to="/projects">
-          <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR WORK</NavLink>
+          <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "#00E4BF",} }}>OUR WORK</NavLink>
         </Link>
         <Link to="/team">
-          <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>OUR TEAM</NavLink>
+          <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "#00E4BF",} }}>OUR TEAM</NavLink>
         </Link>
         <Link to="/resources">
-          <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "green",} }}>RESOURCES</NavLink>
+          <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "#00E4BF",} }}>RESOURCES</NavLink>
         </Link>
 
         <Link to='/join' sx={{
@@ -327,7 +327,7 @@ export const Footer = () => {
                 p: '0.75em',
                 mt: 3,
                 ml: 2,
-                bg: "green",
+                bg: "#00E4BF",
                 borderRadius: "button",
                 boxShadow: "0px 0px 10px #D2D2D2",
                 flex: "1",
@@ -540,7 +540,7 @@ export const Footer = () => {
                 mt: 'auto'
               }}
             >
-              &copy; 2020 <span sx={{ color: 'green', fontWeight: '700' }}>Erevna</span>. All rights reserved.
+              &copy; 2020 <span sx={{ color: 'blue', fontWeight: '700' }}>Erevna</span>. All rights reserved.
             </Text>
 
             <Box
