@@ -1,6 +1,4 @@
 ---
-path: testing13
-date: 2020-04-25T00:28:54.933Z
 slug: covid-spread
 title: Why is COVID-19 spreading faster in certain areas?
 featured: false
