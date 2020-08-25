@@ -27,7 +27,7 @@ export default () => (
         maxWidth: ["100%", "65%"],
         mb: 3,
         mt: 3,
-        color: "green",
+        color: "#00E4BF",
         alignSelf: 'center'
       }}
     >
@@ -49,7 +49,7 @@ export default () => (
       sx={{
         width: "100%",
         mt: 6,
-        bg: 'green',
+        bg: '#00E4BF',
         px: '5%',
         py: '5%',
         display: 'flex',
@@ -92,7 +92,7 @@ export default () => (
           fontWeight: '700',
           width: "100%",
           textAlign: "center",
-          color: 'green'
+          color: '#00E4BF'
         }}
       >
         Have suggestions?

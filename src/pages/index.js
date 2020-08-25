@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import { jsx, Text, Box } from "theme-ui"
+import { jsx, Text, Box, Image } from "theme-ui"
 import Background from '../components/Bitmap.png'
 import ReactGA from 'react-ga';
 
@@ -23,21 +23,7 @@ const IndexPage = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [imageRef])
-
-  const backgroundImageStyles = {
-        backgroundImage: `url(${Background})`,
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        width:'100vw',
-        minHeight: '35vw',
-        backgroundSize: 'cover',
-        Background: 'linear-gradient',
-        opacity: '0.8',
-        backgroundColor: 'grey',
-        backgroundRepeat: 'no-repeat'
-};
+  }, [imageRef]);
 
   return (
     <Box
@@ -46,23 +32,35 @@ const IndexPage = () => {
         flexDirection: "column"
       }}
     >
+      <Helmet title="CVT | Home" />
+
       <div
         sx={{
           width: "100%",
-          height: `${`calc(${height}px - 8vh)`}`
+          height: `${`calc(${height}px + 1vh)`}`
         }}
       />
 
-      <div css={backgroundImageStyles} ref={imageRef}>
+      <div sx={{
+        display: 'block',
+      }}>
+        <Image src={Background} sx={{
+          width: '100vw',
+          height: 'auto',
+          position: 'absolute',
+          left: 0,
+          top: 0
+        }} ref={imageRef} />
+
         <Box
           sx={{
-            position: "relative",
+            position: "absolute",
+            top: ['0', '10%'],
+            left: ['0', '5%'],
             display: "flex",
             flexDirection: "column",
-            // alignItems: 'center'
           }}
         >
-          <Helmet title="CVT | Home" />
           <Text
             sx={{
               fontSize: [2, 4],
@@ -82,7 +80,7 @@ const IndexPage = () => {
               fontWeight: '700',
               mb: '3',
             
-              color: "green"
+              color: "#00E4BF"
             }}
           >
             #WeAreInThisTogether.
