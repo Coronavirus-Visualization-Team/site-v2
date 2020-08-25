@@ -40,7 +40,7 @@ const Projects = ({ data }) => {
           alignItems: 'center',
           alignSelf: 'center',
           mb: 3,
-          color: 'green',
+          color: '#00E4BF',
           textAlign: 'center'
         }}
       >
@@ -67,7 +67,7 @@ const Projects = ({ data }) => {
           sx={{
             fontSize: [2, 3],
             position: "relative",
-            bg: "green",
+            bg: "#00E4BF",
             maxWidth: "100%",
             p: 4,
             display: "flex",
@@ -131,7 +131,7 @@ const Projects = ({ data }) => {
                 top: "50%",
                 transform: "translateY(-50%)",
                 right: '5px',
-                color: 'green',
+                color: '#00E4BF',
                 fontSize: ["80px", "120px"],
                 cursor: 'pointer'
               }}
@@ -188,7 +188,7 @@ const Projects = ({ data }) => {
                   sx={{
                     width: "20px",
                     height: "20px",
-                    bg: index === shownFeatured ? "green" : "lightgray",
+                    bg: index === shownFeatured ? "#00E4BF" : "lightgray",
                     borderRadius: "50%",
                     border: "solid 4px gray",
                     mx: 3,
@@ -252,7 +252,8 @@ const Projects = ({ data }) => {
           maxHeight: "800px",
           maxWidth: '100% !important',
           mx: '0 !important',
-          px: '5%'
+          px: '5%',
+
         }}
       >
         {vizPosts && (
@@ -264,16 +265,18 @@ const Projects = ({ data }) => {
               flexDirection: "column",
               overflowY: "scroll",
               flex: 1,
+             
             }}>
+          
               {vizPosts.map(({ node: post }) => {
-                return <VizTile
+                return <Box sx={{bg: 'white'}}><VizTile
                 link= {post.childMarkdownRemark.frontmatter.link}
                 title={post.childMarkdownRemark.frontmatter.name}
                 img={post.childMarkdownRemark.frontmatter.image}
                 linkTarget={post.childMarkdownRemark.frontmatter.linkTarget} >
-                </VizTile>
+                </VizTile></Box>
               })}
-            </Box>
+              </Box>
           </Box>
         )}
 

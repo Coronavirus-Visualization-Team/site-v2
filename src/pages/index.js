@@ -82,7 +82,7 @@ const IndexPage = () => {
               fontWeight: '700',
               mb: '3',
             
-              color: "green"
+              color: "#00E4BF"
             }}
           >
             #WeAreInThisTogether.

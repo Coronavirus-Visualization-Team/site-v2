@@ -36,7 +36,7 @@ const TeamPage = (props) => {
           alignItems: 'center',
           alignSelf: 'center',
           mb: 3,
-          color: 'green'
+          color: '#00E4BF'
         }}
       >
         Our Team
@@ -46,7 +46,7 @@ const TeamPage = (props) => {
         sx={{
           fontSize: [2, 3],
           position: "relative",
-          bg: "green",
+          bg: "#00E4BF",
           maxWidth: "100%",
           p: 4,
           display: "flex",
