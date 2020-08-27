@@ -21,7 +21,7 @@ export default () => (
     <Helmet title="CVT | Resources" />
     <Text
       sx={{
-        fontSize: [3, 4],
+        fontSize: [4, 5],
         fontWeight: '700',
         textAlign: 'center',
         maxWidth: ["100%", "65%"],

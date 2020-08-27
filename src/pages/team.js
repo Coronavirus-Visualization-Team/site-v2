@@ -31,7 +31,7 @@ const TeamPage = (props) => {
       <Helmet title="CVT | Team" />
       <Text
         sx={{
-          fontSize: [3, 4],
+          fontSize: [4, 5],
           fontWeight: '700',
           alignItems: 'center',
           alignSelf: 'center',
