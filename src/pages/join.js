@@ -35,7 +35,7 @@ const JoinPage = props => {
           position: "relative"
         }}
       >
-        Our mission.
+        Our Mission.
       </Text>
       <Text sx={{ variant: "styles.bodyText", color: "secondary", position: "relative" }}>
         We collaborate on data visualization and analytics projects, economic
@@ -44,7 +44,7 @@ const JoinPage = props => {
       </Text>
 
       <Text sx={{ variant: "styles.headerText", color: "primary", position: "relative" }}>
-        Let’s accomplish things together.
+        Let’s Accomplish Things Together.
       </Text>
       <Text sx={{ variant: "styles.subHeader", color: "secondary", position: "relative" }}>
         Join our global organization comprised of students from these institutions and
