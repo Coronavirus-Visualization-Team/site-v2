@@ -540,7 +540,7 @@ export const Footer = () => {
                 mt: 'auto'
               }}
             >
-              &copy; 2020 <span sx={{ color: 'blue', fontWeight: '700' }}>Erevna</span>. All rights reserved.
+              &copy; 2020 <span sx={{ color: '#68ddc2', fontWeight: '700' }}>Erevna</span>. All rights reserved.
             </Text>
 
             <Box
