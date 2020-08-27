@@ -253,6 +253,7 @@ const Projects = ({ data }) => {
           maxWidth: '100% !important',
           mx: '0 !important',
           px: '5%',
+          bg: "#D3D3D3"
         }}
       >
         {vizPosts && (
@@ -260,20 +261,20 @@ const Projects = ({ data }) => {
             <Text sx={ { variant: "styles.headerText", mb: 4, pt: "0 !important", color: "black", textAlign: "center", fontWeight: '700'} }>Visualizations</Text>
 
             <Box sx={{
-              display: "flex",
+              //display: "flex",
+              display: "inline-block",
               flexDirection: "column",
               overflowY: "scroll",
-              flex: 1,
-             
+              flex: 1
             }}>
           
               {vizPosts.map(({ node: post }) => {
-                return <Box sx={{bg: 'white'}}><VizTile
+                return <Box sx={{bg: '#ffffff00'}}><VizTile sx={{}}
                 link= {post.childMarkdownRemark.frontmatter.link}
                 title={post.childMarkdownRemark.frontmatter.name}
                 img={post.childMarkdownRemark.frontmatter.image}
                 linkTarget={post.childMarkdownRemark.frontmatter.linkTarget} >
-                </VizTile>
+                </VizTile></Box>
               })}
               </Box>
           </Box>
@@ -299,12 +300,12 @@ const Projects = ({ data }) => {
             flex: 1,
           }}>
             {posts.map(({ node: post }) => {
-              return <Tile
+              return <Box sx={{bg: '#ffffff00'}}><Tile
               slug={post.frontmatter.slug}
               title={post.frontmatter.title}
               img={post.frontmatter.image}
               >
-              </Tile>
+              </Tile></Box>
             })}
           </Box>
         </Box>
