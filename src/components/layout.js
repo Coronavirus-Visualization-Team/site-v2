@@ -94,7 +94,7 @@ export const Header = () => {
           ml: 'auto !important'
         }}>
           <Button sx={{
-            bg: 'blue',
+            bg: '#388df7',
             borderRadius: '24px',
             mr: 0,           
             px: '1.85em',
@@ -363,7 +363,7 @@ export const Footer = () => {
                 px: ['1.6em', '1.75em'],
                 mt: 4,
                 ml: 3,
-                bg: "blue",
+                bg: "#388df7",
                 borderRadius: "button",
                 boxShadow: "0px 0px 10px #D2D2D2",
                 whiteSpace: 'nowrap'
