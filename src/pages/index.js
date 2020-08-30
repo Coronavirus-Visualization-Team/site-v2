@@ -16,14 +16,18 @@ const IndexPage = () => {
   const [height, setHeight] = useState();
 
   useEffect(() => {
-    setHeight(imageRef?.current?.getBoundingClientRect().height);
+    imageLoad();
 
-    const handleResize = () => setHeight(imageRef?.current?.getBoundingClientRect().height);
+    const handleResize = () => imageLoad();
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, [imageRef]);
+
+  const imageLoad = () => {
+    setHeight(imageRef?.current?.getBoundingClientRect().height);
+  }
 
   return (
     <Box
@@ -37,7 +41,7 @@ const IndexPage = () => {
       <div
         sx={{
           width: "100%",
-          height: `${`calc(${height}px + 1vh)`}`
+          height: `${`calc(${height}px - 16vh)`}`
         }}
       />
 
@@ -50,7 +54,7 @@ const IndexPage = () => {
           position: 'absolute',
           left: 0,
           top: 0
-        }} ref={imageRef} />
+        }} ref={imageRef} onLoad={() => imageLoad()} />
 
         <Box
           sx={{
