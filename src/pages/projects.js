@@ -2,7 +2,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
-import { Container, jsx, Text, Grid, Box, Card, Button, Image } from "theme-ui"
+import { Container, jsx, Text, Grid, Box, Card, Button, Image} from "theme-ui"
 import ProjectPicker from "../components/Projects/ProjectPicker"
 import Tile from "../components/Projects/Tile"
 import VizTile from "../components/Visualizations/VizTile"
@@ -65,11 +65,11 @@ const Projects = ({ data }) => {
 
         <Container
           sx={{
-            fontSize: [2, 3],
+            fontSize: [3,4],
             position: "relative",
             bg: "#00E4BF",
             maxWidth: "100%",
-            p: 4,
+            p: 3,
             display: "flex",
             flexDirection: "column",
             justifyContent: 'space-between',
@@ -92,15 +92,62 @@ const Projects = ({ data }) => {
               width: "90%",
               mx: "auto",
               position: "relative",
-              mt: 4
+              mt: 4,
+              display: "flex",
+              flexDirection: ["column", "row"]
             }}
           >
+          <Box sx={{width: ["100%", "60%"], float: "left"}}>
             <Image
               src={featured[shownFeatured]?.node?.frontmatter?.image}
               sx={{
-                width: '100%'
+                width: ["100%", "90%"],
+                float: "left",
+                alignSelf: "flex-start",
+                objectFit: "contain",
+                display: "inline-block",
+                verticalAlign: "middle",
+                height: "auto"
               }}
             />
+          </Box>
+
+          <Box sx={{float: 'right', width: ["100%", "40%"]}}> 
+          <Box>
+          <Text
+            sx={{
+              width: "70%",
+              mx: "auto",
+              mt: 0.2,
+              fontWeight: "700",
+              color: 'white',
+              fontSize: [2,3],
+              objectFit: "contain",
+              display: "inline-block",
+              height: "100%"
+
+            }}
+          >
+            {featured[shownFeatured]?.node?.frontmatter?.title}
+          </Text>
+
+          <Text
+            sx={{
+              width: "100%",
+              mx: "auto",
+              mt: 2,
+              mb: 4,
+              fontSize: ["0.9rem", "1.0rem"],
+              color: 'white',
+              display: "table-cell",
+              verticalAlign: "middle"
+            }}
+          >
+            {featured[shownFeatured]?.node?.html.replace(/<p>/g,'').replace('</p>','')}
+          </Text>
+          </Box>
+          </Box>
+          
 
             {shownFeatured > 0 ?
             <Text
@@ -108,7 +155,7 @@ const Projects = ({ data }) => {
                 position: "absolute",
                 top: "50%",
                 transform: "translateY(-50%)",
-                left: '5px',
+                left: '-40px',
                 color: 'green',
                 fontSize: ["80px", "120px"],
                 cursor: 'pointer'
@@ -130,8 +177,8 @@ const Projects = ({ data }) => {
                 position: "absolute",
                 top: "50%",
                 transform: "translateY(-50%)",
-                right: '5px',
-                color: '#00E4BF',
+                right: '-40px',
+                color: 'green',
                 fontSize: ["80px", "120px"],
                 cursor: 'pointer'
               }}
@@ -155,7 +202,7 @@ const Projects = ({ data }) => {
               }}
               sx={{
                 position: "absolute",
-                bottom: 4,
+                bottom: -5,
                 right: 3,
                 fontWeight: "700",
                 fontSize: ["0.7rem", "1rem"],
@@ -170,13 +217,15 @@ const Projects = ({ data }) => {
             </Button>
           </Box>
 
+
           <Box
             sx={{
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
               mx: "auto",
-              my: 3
+              my: 3,
+              mt: 5
             }}
           >
 
@@ -188,9 +237,9 @@ const Projects = ({ data }) => {
                   sx={{
                     width: "20px",
                     height: "20px",
-                    bg: index === shownFeatured ? "#00E4BF" : "lightgray",
+                    bg: index === shownFeatured ? "#00E4BF" : "white",
                     borderRadius: "50%",
-                    border: "solid 4px gray",
+                    border: "solid 4px white",
                     mx: 3,
                     cursor: "pointer"
                   }}
@@ -199,6 +248,7 @@ const Projects = ({ data }) => {
             })}
 
           </Box>
+
 
           <Text
             sx={{
@@ -211,32 +261,8 @@ const Projects = ({ data }) => {
           >
             Image Source: {featured[shownFeatured]?.node?.frontmatter?.label}
           </Text>
-          
-          <Text
-            sx={{
-              width: "90%",
-              mx: "auto",
-              mt: 3,
-              fontWeight: "700",
-              color: 'white'
-            }}
-          >
-            {featured[shownFeatured]?.node?.frontmatter?.title}
-          </Text>
 
-          <Text
-            sx={{
-              width: "90%",
-              mx: "auto",
-              mt: 2,
-              mb: 4,
-              fontSize: ["1.1rem", "1.2rem"],
-              color: 'white'
-            }}
-          >
-            {featured[shownFeatured]?.node?.html.replace(/<p>/g,'').replace('</p>','')}
-          </Text>
-
+         
           {/**<ProjectPicker posts={posts}/>
           */}
         </Container>
