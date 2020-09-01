@@ -279,7 +279,7 @@ const Projects = ({ data }) => {
           maxWidth: '100% !important',
           mx: '0 !important',
           px: '5%',
-          bg: "#D3D3D3"
+          bg: "#E5E5E5"
         }}
       >
         {vizPosts && (
