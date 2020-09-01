@@ -46,7 +46,7 @@ const IndexPage = () => {
       />
 
       <div sx={{
-        display: 'block',
+        display: 'block'
       }}>
         <Image src={Background} sx={{
           width: '100vw',
@@ -59,10 +59,10 @@ const IndexPage = () => {
         <Box
           sx={{
             position: "absolute",
-            top: ['0', '10%'],
-            left: ['0', '5%'],
+            top: ['0', '15%'],
+            left: ['0', '30%'],
             display: "flex",
-            flexDirection: "column",
+            flexDirection: "column"
           }}
         >
           <Text
@@ -83,7 +83,6 @@ const IndexPage = () => {
               maxWidth: ["100%", "100%"],
               fontWeight: '700',
               mb: '3',
-            
               color: "#00E4BF"
             }}
           >
