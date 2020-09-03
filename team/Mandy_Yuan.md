@@ -1,13 +1,13 @@
 ---
 name: Mandy Yuan
-executive: false
+executive: true
 director: false
-lead: false
+lead: true
 community_manager:   
 erevna:  
 pm: true 
 erevna_team: Design
-position:  
+position:  Design
 project: Design, Advisory Board, GBV
 image: ../assets/default_exec_image.png
 linkedin: 
