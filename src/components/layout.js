@@ -79,7 +79,6 @@ export const Header = () => {
           display: 'none'
         }
       }}>
-        <div sx={{ ml: 'auto !important' }} />
         <Link to="/projects">
           <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "#00E4BF",} }}>OUR WORK</NavLink>
         </Link>
