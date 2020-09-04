@@ -59,8 +59,8 @@ const IndexPage = () => {
         <Box
           sx={{
             position: "absolute",
-            top: ['0', '15%'],
-            left: ['0', '30%'],
+            top: ['0', '25%'],
+            left: ['0', '5%'],
             display: "flex",
             flexDirection: "column"
           }}
