@@ -279,11 +279,11 @@ const Projects = ({ data }) => {
           maxWidth: '100% !important',
           mx: '0 !important',
           px: '5%',
-          bg: "#E5E5E5"
+          bg: "#F8F8F8"
         }}
       >
         {vizPosts && (
-          <Box sx={{display: "flex", flexDirection: "column", width:["100%", "45%"], alignItems: 'top', float: 'left', overflowY: "hidden", overflowX: "visible", px: '40px', py: 3, bg: '#ccfff5'}}>
+          <Box sx={{display: "flex", flexDirection: "column", width:["100%", "45%"], alignItems: 'top', float: 'left', overflowY: "hidden", overflowX: "visible", px: '40px', py: 3, bg: '#ccfff5', borderRadius: "10px"}}>
             <Text sx={ { variant: "styles.headerText", mb: 4, pt: "0 !important", color: "black", textAlign: "center", fontWeight: '700'} }>Visualizations</Text>
 
             <Box sx={{
@@ -316,7 +316,7 @@ const Projects = ({ data }) => {
 
         </Box>
 
-        <Box sx={{display: "flex", flexDirection: "column", width:["100%", "45%"], alignItems: 'top', float: 'right', overflowY: "hidden", overflowX: "visible", px: '40px', py: 3, bg: '#c5e1ff'}}>
+        <Box sx={{display: "flex", flexDirection: "column", width:["100%", "45%"], alignItems: 'top', float: 'right', overflowY: "hidden", overflowX: "visible", px: '40px', py: 3, bg: '#c5e1ff', borderRadius: "10px"}}>
           <Text sx={ { variant: "styles.headerText", mb: 4, pt: "0 !important", color: "black", textAlign: "center", fontWeight: '700' } }>More Projects</Text>
 
           <Box sx={{
