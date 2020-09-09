@@ -101,6 +101,8 @@ export const Header = () => {
             pb: '0.85em !important',
             fontSize: '0.9em',
             fontWeight: '700',
+            justifyContent: "right",
+            justifyItems: "right",
             cursor: 'pointer',
             '&:focus': {
               outline: 'none'
