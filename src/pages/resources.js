@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from "react"
-import { jsx, Text, Box, Embed } from "theme-ui"
+import { jsx, Text, Box, Embed, Container} from "theme-ui"
 import { Helmet } from "react-helmet"
 import ReactGA from 'react-ga';
 
@@ -53,7 +53,10 @@ export default () => (
         px: '5%',
         py: '5%',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        position: "relative",
+        alignSelf: "center",
+        width: ["88vw"]
       }}
     >
       <Text
@@ -116,7 +119,8 @@ export default () => (
         mt: 5,
         justifyContent: "center",
         alignItems: "center",
-        mx: "auto"
+        mx: "auto",
+        width: ["88vw"]
       }}
     >
       <Embed
