@@ -2,7 +2,7 @@
 name: Maria Izzi
 executive: false
 director: false
-lead: true
+lead: false
 community_manager: Mental Health, BLM  
 erevna:   
 position:  
