@@ -30,7 +30,7 @@ const JoinPage = props => {
       <Text
         sx={{
           variant: "styles.headerText",
-          mt: "6vh",
+          mt: "76.8px",
           color: "primary",
           position: "relative"
         }}
@@ -43,10 +43,10 @@ const JoinPage = props => {
         the impact of COVID-19, clear misconceptions, and the good that is happening.
       </Text>
 
-      <Text sx={{ variant: "styles.headerText", color: "primary", position: "relative" }}>
+      <Text sx={{ variant: "styles.headerText", color: "primary", position: "relative", mt: "76.8px" }}>
         Let’s Accomplish Things Together.
       </Text>
-      <Text sx={{ variant: "styles.subHeader", color: "secondary", position: "relative" }}>
+      <Text sx={{ variant: "styles.bodyText", color: "secondary", position: "relative" }}>
         Join our global organization comprised of students from these institutions and
         more:
       </Text>
@@ -119,7 +119,7 @@ const JoinPage = props => {
         </Grid>
       </Box>
 
-      <Text sx={{ variant: "styles.subHeader", py: 15, mb: 2, color: "primary" }}>
+      <Text sx={{ variant: "styles.bodyText", py: 15, mb: 2, color: "primary" }}>
         We’re also partnered with these organizations:{" "}
       </Text>
       <Grid width={["20%"]} gap={["6%"]} sx={{
@@ -153,7 +153,7 @@ const JoinPage = props => {
           )
         })}
       </Grid>
-      <Text sx={{ variant: "styles.headerText", mt: "4vh", color: "primary" }}>Individuals</Text>
+      <Text sx={{ variant: "styles.headerText", mt: "76.8px", color: "primary" }}>Individuals</Text>
       <Text sx={{ variant: "styles.bodyText", color: "secondary" }}>
         We're looking for driven and talented individuals to join our team
         remotely. Learn more about our teams and ongoing
@@ -177,7 +177,7 @@ const JoinPage = props => {
         Join Us
       </Button>
 
-      <Text sx={{ variant: "styles.headerText", mt: "2vh", color: "primary" }}>Organizations</Text>
+      <Text sx={{ variant: "styles.headerText", mt: "76.8px", color: "primary" }}>Organizations</Text>
       <Text sx={{ variant: "styles.bodyText", color: "secondary" }}>
         We’re looking to form partnerships and project collaborations with
         organizations that either have data we can use or seek data. We welcome
@@ -202,7 +202,7 @@ const JoinPage = props => {
         Email Us
       </Button>
 
-      <Text sx={{ variant: "styles.headerText", mt: "2vh", color: "primary" }}>Join Our Community</Text>
+      <Text sx={{ variant: "styles.headerText", mt: "76.8px", color: "primary" }}>Join Our Community</Text>
       <Text sx={{ variant: "styles.bodyText", color: "secondary" }}>
       The Coronavirus Visualization Community, or the CVC for short, is the larger community of the CVT and has learning opportunities, research projects, 
       and a community of like-minded individuals who are not as experienced in data science or just want to help out during the COVID-19 pandemic. 

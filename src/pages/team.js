@@ -53,7 +53,9 @@ const TeamPage = (props) => {
           flexDirection: "column",
           justifyContent: 'space-between',
           mt: "50px",
-          mb: "30px !important"
+          mb: "30px !important",
+          alignSelf: "center",
+          width: ["88vw"]
         }}
       >
         <Text
