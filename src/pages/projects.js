@@ -156,7 +156,7 @@ const Projects = ({ data }) => {
                 top: "50%",
                 transform: "translateY(-50%)",
                 left: '-40px',
-                color: 'green',
+                color: 'white',
                 fontSize: ["80px", "120px"],
                 cursor: 'pointer'
               }}
@@ -178,7 +178,7 @@ const Projects = ({ data }) => {
                 top: "50%",
                 transform: "translateY(-50%)",
                 right: '-40px',
-                color: 'green',
+                color: 'white',
                 fontSize: ["80px", "120px"],
                 cursor: 'pointer'
               }}
