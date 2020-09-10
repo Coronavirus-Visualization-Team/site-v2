@@ -79,7 +79,7 @@ export const Header = () => {
           display: 'none'
         }
       }}>
-        <Link to="/projects">
+        <Link to="/projects" sx={{ ml: "auto" }}>
           <NavLink sx={{ color: navColor, fontSize: '0.9em', mx: '2.75em', ":hover,:active": { color: "#00E4BF",} }}>OUR WORK</NavLink>
         </Link>
         <Link to="/team">
@@ -90,8 +90,8 @@ export const Header = () => {
         </Link>
 
         <Link to='/join' sx={{
-          ml: 'auto !important'
-        }}>
+          ml: 'auto'
+        }} style={{ marginLeft: 'auto' }}>
           <Button sx={{
             bg: '#388df7',
             borderRadius: '24px',
