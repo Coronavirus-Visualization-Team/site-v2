@@ -90,8 +90,8 @@ export const Header = () => {
         </Link>
 
         <Link to='/join' sx={{
-          ml: 'auto !important'
-        }}>
+          ml: 'auto'
+        }} style={{ marginLeft: 'auto' }}>
           <Button sx={{
             bg: '#388df7',
             borderRadius: '24px',
