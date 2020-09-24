@@ -223,7 +223,6 @@ export const Footer = () => {
         sx={{
           width: '100%',
           height: '1px',
-          bg: '#00E4BF',
           mt: 5
         }}
       >
