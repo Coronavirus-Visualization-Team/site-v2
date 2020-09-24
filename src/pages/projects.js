@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet"
 import ReactGA from 'react-ga';
 import { useState } from "react"
 
-const trackingId = "UA-171730199-2"; 
+const trackingId = "UA-171730199-2";
 
 ReactGA.initialize(trackingId);
 ReactGA.pageview('/projects');
@@ -49,16 +49,14 @@ const Projects = ({ data }) => {
       <Text
         sx={{
           fontSize: [0, 1],
-          fontWeight: '400',
-          alignItems: 'center',
+          maxWidth: ["100%", "65%"],
+          textAlign: 'center',
           alignSelf: 'center',
-          mb: 3,
-          color: 'black',
-          textAlign: 'center'
+          margin: '0 auto'
         }}
       >
-        Our team has created empirical data visualizations that educate the public 
-        on the pandemic's ongoing impact and display information from multiple, 
+        Our team has created empirical data visualizations that educate the public
+        on the pandemic's ongoing impact and display information from multiple,
         often overlooked angles such as climate implications, socioeconomic factors,
         and social aspects.
       </Text>
@@ -86,7 +84,7 @@ const Projects = ({ data }) => {
           >
             Featured Projects
           </Text>
-          
+
           <Box
             sx={{
               width: "90%",
@@ -112,7 +110,7 @@ const Projects = ({ data }) => {
             />
           </Box>
 
-          <Box sx={{float: 'right', width: ["100%", "40%"]}}> 
+          <Box sx={{float: 'right', width: ["100%", "40%"]}}>
           <Box>
           <Text
             sx={{
@@ -147,7 +145,7 @@ const Projects = ({ data }) => {
           </Text>
           </Box>
           </Box>
-          
+
 
             {shownFeatured > 0 ?
             <Text
@@ -262,12 +260,12 @@ const Projects = ({ data }) => {
             Image Source: {featured[shownFeatured]?.node?.frontmatter?.label}
           </Text>
 
-         
+
           {/**<ProjectPicker posts={posts}/>
           */}
         </Container>
       </Container>
-      
+
       <Container
         sx={{
           width: '100% !important',
@@ -293,7 +291,7 @@ const Projects = ({ data }) => {
               overflowY: "scroll",
               flex: 1
             }}>
-          
+
               {vizPosts.map(({ node: post }) => {
                 return <Box sx={{bg: '#ffffff00'}}><VizTile sx={{}}
                 link= {post.childMarkdownRemark.frontmatter.link}
@@ -385,7 +383,7 @@ export default () => (
               }
             }
           }
-        } 
+        }
       }
     `}
     render={(data, count) => <Projects data={data} count={count} />}
