@@ -95,7 +95,7 @@ export const Header = () => {
           <Button sx={{
             bg: '#388df7',
             borderRadius: '24px',
-            mr: 0,           
+            mr: 0,
             px: '1.85em',
             pt: '0.85em !important',
             pb: '0.85em !important',
@@ -273,7 +273,7 @@ export const Footer = () => {
             {/** Mailchimp Identifiers */}
             <Input type="hidden" name="u" value="296f4b87de1255e43330d3eed" />
             <Input type="hidden" name="id" value="fd200b5e7b" />
-          
+
             <Input
               placeholder="First Name"
               name="MERGE1"
@@ -338,7 +338,7 @@ export const Footer = () => {
               Subscribe
             </Button>
           </Box>
-          
+
           <Box
             sx={{
               display: 'flex',
