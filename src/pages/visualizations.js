@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 import ReactGA from 'react-ga';
 import VizTile from '../components/Visualizations/VizTile'
 
-const trackingId = "UA-171730199-2"; 
+const trackingId = "UA-171730199-2";
 
 ReactGA.initialize(trackingId);
 ReactGA.pageview('/visualizations');
@@ -17,7 +17,7 @@ const VizPage = props => {
   const socioeconomicsData = props.data.socioeconomics.edges
 
   const [colorMode, setColorMode] = useColorMode();
-  
+
   return (
     <>
       <Box
@@ -49,105 +49,107 @@ const VizPage = props => {
            and display information from multiple, often overlooked angles such as climate implications, socioeconomic factors, and societal aspects.
         </Text>
       </Box>
-      <Container
-              sx={{
-                position: "relative",
-                width: "100%",
-                minWidth: "100%",
-              }}
-      >
-      <Text
-        sx={{
-          width: "100%",
-          textAlign: "left",
-          m: "1.5em 0 4vh 0",
-          color: "primary",
-          fontSize: [2, 3],
-
-        }}
-      >
-        Breaking News
-      </Text>
-      </Container>
-      <Grid
-        gap={3}
-        width={[300, null, 350]}
-        sx={{
-          justifyItems: ['center', 'unset'],
-          position: "relative"
-        }}
-      >
-        {breakingNewsData.map(item => {
-          const data = item.node.childMarkdownRemark.frontmatter
-          return (
-            <VizTile name={data.name} image={data.image} author={data.author} link={data.link} linkTarget={data.linkTarget} />
-          )
-        })}
-      </Grid>
-      <Box
-        sx={{
-          position: "relative",
-          display: "flex",
-          flexDirection: "column"
-        }}
-      >
-        <Text
-          sx={{
-            fontSize: [2, 3],
-            maxWidth: ["100%", "65%"],
-            m: "4vh 0vw",
-            color: "primary"
-          }}
-        >
-          Socioeconomic Factors
-      </Text>
-      </Box>
-      <Grid
-        gap={3}
-        width={[300, null, 350]}
-        sx={{
-          justifyItems: ['center', 'unset'],
-        }}
-      >
-      {socioeconomicsData.map(item => {
-          const data = item.node.childMarkdownRemark.frontmatter
-          return (
-            <VizTile name={data.name} image={data.image} author={data.author} link={data.link} linkTarget={data.linkTarget} />
-          )
-        })}
-        </Grid>
-      <Box
-        sx={{
-          position: "relative",
-          display: "flex",
-          flexDirection: "column"
-        }}
-      >
-        <Text
-          sx={{
-            fontSize: [2, 3],
-            maxWidth: ["100%", "65%"],
-            m: "4vh 0vw",
-            color: "primary"
-          }}
-        >
-          General
-      </Text>
-      </Box>
-      <Grid
-        gap={3}
-        width={[300, null, 350]}
-        sx={{
-          justifyItems: ['center', 'unset'],
-        }}
-      >
-      {vizData.map(item => {
-          const data = item.node.childMarkdownRemark.frontmatter
-          return (
-            <VizTile name={data.name} image={data.image} author={data.author} link={data.link} linkTarget={data.linkTarget} />
-          )
-        })}
-        </Grid>
+      {
+        // <Container
+        //         sx={{
+        //           position: "relative",
+        //           width: "100%",
+        //           minWidth: "100%",
+        //         }}
+        // >
+        // <Text
+        //   sx={{
+        //     width: "100%",
+        //     textAlign: "left",
+        //     m: "1.5em 0 4vh 0",
+        //     color: "primary",
+        //     fontSize: [2, 3],
+        //
+        //   }}
+        // >
+        //   Breaking News
+        // </Text>
+        // </Container>
+        // <Grid
+        //   gap={3}
+        //   width={[300, null, 350]}
+        //   sx={{
+        //     justifyItems: ['center', 'unset'],
+        //     position: "relative"
+        //   }}
+        // >
+        //   {breakingNewsData.map(item => {
+        //     const data = item.node.childMarkdownRemark.frontmatter
+        //     return (
+        //       <VizTile name={data.name} image={data.image} author={data.author} link={data.link} linkTarget={data.linkTarget} />
+        //     )
+        //   })}
+        // </Grid>
+        // <Box
+        //   sx={{
+        //     position: "relative",
+        //     display: "flex",
+        //     flexDirection: "column"
+        //   }}
+        // >
+        //   <Text
+        //     sx={{
+        //       fontSize: [2, 3],
+        //       maxWidth: ["100%", "65%"],
+        //       m: "4vh 0vw",
+        //       color: "primary"
+        //     }}
+        //   >
+        //     Socioeconomic Factors
+        // </Text>
+        // </Box>
+        // <Grid
+        //   gap={3}
+        //   width={[300, null, 350]}
+        //   sx={{
+        //     justifyItems: ['center', 'unset'],
+        //   }}
+        // >
+        // {socioeconomicsData.map(item => {
+        //     const data = item.node.childMarkdownRemark.frontmatter
+        //     return (
+        //       <VizTile name={data.name} image={data.image} author={data.author} link={data.link} linkTarget={data.linkTarget} />
+        //     )
+        //   })}
+        //   </Grid>
+        // <Box
+        //   sx={{
+        //     position: "relative",
+        //     display: "flex",
+        //     flexDirection: "column"
+        //   }}
+        // >
+        //   <Text
+        //     sx={{
+        //       fontSize: [2, 3],
+        //       maxWidth: ["100%", "65%"],
+        //       m: "4vh 0vw",
+        //       color: "primary"
+        //     }}
+        //   >
+        //     General
+        // </Text>
+        // </Box>
+        // <Grid
+        //   gap={3}
+        //   width={[300, null, 350]}
+        //   sx={{
+        //     justifyItems: ['center', 'unset'],
+        //   }}
+        // >
+        // {vizData.map(item => {
+        //     const data = item.node.childMarkdownRemark.frontmatter
+        //     return (
+        //       <VizTile name={data.name} image={data.image} author={data.author} link={data.link} linkTarget={data.linkTarget} />
+        //     )
+        //   })}
+        //   </Grid>
+      }
 
       <Box
         sx={{
