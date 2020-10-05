@@ -5,8 +5,8 @@ director: true
 lead: false
 community_manager:   
 erevna:  
-position: CVT Hackathons
-project: 
+position: Events
+project:
 image: ../assets/kevin.png
 linkedin: "https://www.linkedin.com/in/itskevinwang/"
 ---
