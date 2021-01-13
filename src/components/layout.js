@@ -19,7 +19,7 @@ import LogoWithText from "./cvt-logo-full-text.png";
 import { Helmet } from "react-helmet"
 import TwitterLogo from "./social-icons/Twitter.png"
 import InstagramLogo from "./social-icons/Instagram.png"
-import LinkedinLogo from "./social-icons/Linkedin.png"
+import LinkedinLogo from "./social-icons/LinkedIn.png"
 import MediumLogo from "./social-icons/Medium.png"
 import FacebookLogo from "./social-icons/Facebook-Icon-White.png"
 import './index.css';
