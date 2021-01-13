@@ -19,6 +19,7 @@ import LogoWithText from "./cvt-logo-full-text.png";
 import { Helmet } from "react-helmet"
 import TwitterLogo from "./social-icons/Twitter.png"
 import InstagramLogo from "./social-icons/Instagram.png"
+import LinkedinLogo from "./social-icons/Linkedin.png"
 import MediumLogo from "./social-icons/Medium.png"
 import FacebookLogo from "./social-icons/Facebook-Icon-White.png"
 import './index.css';
@@ -420,7 +421,7 @@ export const Footer = () => {
 
               <Button
                 as="a"
-                href="https://instagram.com/joincvt"
+                href="https://instagram.com/joinerevna"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
@@ -455,6 +456,26 @@ export const Footer = () => {
                     width: '40px',
                   }}
                   src={TwitterLogo}
+                />
+              </Button>
+
+              <Button
+                as="a"
+                href="https://linkedin.com/company/covid-visualization-team"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  background: 'none',
+                  mr: 4,
+                  p: 0
+                }}
+              >
+                <Image
+                  sx={{
+                    filter: 'brightness(0)',
+                    width: '40px',
+                  }}
+                  src={LinkedinLogo}
                 />
               </Button>
 
@@ -498,7 +519,7 @@ export const Footer = () => {
             >
               <Text
                 as="a"
-                href="https://www.linkedin.com/company/covid-visualization-team/"
+                href="https://www.linkedin.com/company/weareerevna/"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
@@ -506,7 +527,7 @@ export const Footer = () => {
                   mr: 3
                 }}
               >
-                LinkedIn
+                Erevna LinkedIn
               </Text>
 
               <Text
@@ -540,7 +561,7 @@ export const Footer = () => {
                 mt: 'auto'
               }}
             >
-              &copy; 2020 <span sx={{ color: '#68ddc2', fontWeight: '700' }}>Erevna</span>. All rights reserved.
+              &copy; 2021 <span sx={{ color: '#68ddc2', fontWeight: '700' }}>Erevna</span>. All rights reserved.
             </Text>
 
             <Box

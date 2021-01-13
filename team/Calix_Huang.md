@@ -3,11 +3,11 @@ name: Calix Huang
 executive: true
 director: true
 lead: true
-community_manager: Development
+community_manager: Development/Engineering
 erevna:  
-position: Development
+position: Development/Engineering
 project: Website, Superdashboard
 image: ../assets/calix.png
-linkedin: "https://www.linkedin.com/in/calix-huang/"
+linkedin: "https://calix.dev"
 developer: true
 ---
