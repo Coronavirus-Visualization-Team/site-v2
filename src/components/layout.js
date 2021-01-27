@@ -421,7 +421,7 @@ export const Footer = () => {
 
               <Button
                 as="a"
-                href="https://instagram.com/joinerevna"
+                href="https://instagram.com/covisualize"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{

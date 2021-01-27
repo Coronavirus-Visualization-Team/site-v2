@@ -4,7 +4,7 @@ import { Box, jsx, Text } from "theme-ui"
 import { Helmet } from "react-helmet"
 import ReactGA from 'react-ga';
 
-const trackingId = "UA-171730199-2"; 
+const trackingId = "UA-171730199-2";
 
 ReactGA.initialize(trackingId);
 ReactGA.pageview('/privacy');
@@ -42,7 +42,7 @@ const PrivacyPage = props => {
       <Box
         sx={{
           width: "100%",
-          mt: 7,
+          mt: 4,
           lineHeight: "2.5em"
         }}
       >
@@ -209,7 +209,7 @@ const PrivacyPage = props => {
             width: "100%",
             color: "secondary"
           }}
-        >For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at coronavirusvisualizationteam@gmail.com.</Text>
+        >For further inquiries related to our privacy practices, or to file a complaint/concern related to your data privacy on the Site, please contact us by e-mail at coronavirusvisualizationteam@gmail.com.</Text>
 
       </Box>
     </Box>
