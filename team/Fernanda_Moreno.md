@@ -2,7 +2,7 @@
 name: Fernanda Moreno
 executive: false
 director: false
-lead: true
+lead: false
 community_manager:   
 erevna:  
 pm: true

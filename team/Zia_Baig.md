@@ -2,9 +2,9 @@
 name: Zia Baig
 executive: false
 director: false
-lead: true
+lead: false
 community_manager:  
-erevna: 
+erevna:
 position:  
 project: Xenophobia Online
 image: ../assets/default_exec_image.png

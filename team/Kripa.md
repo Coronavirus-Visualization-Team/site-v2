@@ -2,9 +2,9 @@
 name: Kripa Krishnan
 executive: false
 director: false
-lead: true
+lead: false
 community_manager:  
-erevna: Second Vice-President 
+erevna: Second Vice-President
 position:  
 project: Socioeconomic Factors, Breaking News
 image: ../assets/default_exec_image.png

@@ -5,8 +5,8 @@ director: false
 lead: true
 community_manager:  
 erevna:   
-position: 
+position:
 project: Inequalities Projects
 image: ../assets/default_exec_image.png
-linkedin: 
+linkedin:
 ---

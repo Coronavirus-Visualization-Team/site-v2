@@ -2,11 +2,11 @@
 name: Adit Seth
 executive: true
 director: false
-lead: false
+lead: true
 community_manager:   
 erevna:  
 position: HR
-project: Balance the Ballot Partnership
+project: Project India
 image: ../assets/default_exec_image.png
 linkedin: "https://www.linkedin.com/in/aditseth/"
 ---

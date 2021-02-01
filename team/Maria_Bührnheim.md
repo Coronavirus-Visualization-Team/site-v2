@@ -3,10 +3,10 @@ name: Maria Bührnheim
 executive: false
 director: false
 lead: true
-community_manager: 
+community_manager:
 erevna:    
 position:  
-project: Brazil
+project: Project Brazil
 image: ../assets/default_exec_image.png
-linkedin: 
+linkedin:
 ---

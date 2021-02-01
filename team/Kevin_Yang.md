@@ -2,7 +2,7 @@
 name: Kevin Yang
 executive: false
 director: false
-lead: true
+lead: false
 community_manager:   
 erevna:  
 position: Mental Health Project Lead

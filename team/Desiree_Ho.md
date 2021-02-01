@@ -2,11 +2,11 @@
 name: Desiree Ho
 executive: false
 director: false
-lead: true
+lead: false
 community_manager:  
 erevna:   
-position: 
+position:
 project: Oasis
 image: ../assets/default_exec_image.png
-linkedin: 
+linkedin:
 ---

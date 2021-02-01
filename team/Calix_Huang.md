@@ -2,7 +2,7 @@
 name: Calix Huang
 executive: true
 director: true
-lead: true
+lead: false
 community_manager: Development/Engineering
 erevna:  
 position: Development/Engineering

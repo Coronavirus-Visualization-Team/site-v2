@@ -6,7 +6,7 @@ lead: true
 community_manager:  
 erevna:   
 position:  
-project: Mental Health
+project: Project Mental Health
 image: ../assets/default_exec_image.png
-linkedin: 
+linkedin:
 ---
