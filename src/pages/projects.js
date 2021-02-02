@@ -2,7 +2,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
-import { Container, jsx, Text, Grid, Box, Card, Button, Image} from "theme-ui"
+import { Container, jsx, Text, Grid, Box, Card, Button, Image, Embed } from "theme-ui"
 import ProjectPicker from "../components/Projects/ProjectPicker"
 import Tile from "../components/Projects/Tile"
 import VizTile from "../components/Visualizations/VizTile"
@@ -333,6 +333,42 @@ const Projects = ({ data }) => {
             })}
           </Box>
         </Box>
+      </Container>
+
+      <Container
+        sx={{
+          fontSize: [3,4],
+          position: "relative",
+          bg: "#00E4BF",
+          maxWidth: "100%",
+          p: 3,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: 'space-between',
+          mt: "50px",
+          mb: "30px !important"
+        }}
+      >
+        <Text
+          sx={{
+            fontSize: [3, 4],
+            fontWeight: '700',
+            textAlign: "center",
+            color: "white",
+            mb: 4
+          }}
+        >
+          CGA Project Showcase
+        </Text>
+
+        <Embed
+          src="https://airtable.com/embed/shrmATaDfsrG7xFBW?backgroundColor=teal"
+          sx={{
+            background: "transparent",
+            border: "1px solid #ccc",
+            height: [450, 350]
+          }}
+        />
       </Container>
     </>
   )
