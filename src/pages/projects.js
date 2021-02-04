@@ -362,7 +362,8 @@ const Projects = ({ data }) => {
         </Text>
 
         <Embed
-          src="https://airtable.com/embed/shrmATaDfsrG7xFBW?backgroundColor=teal&layout=card"
+          class="airtable-embed"
+          src="https://airtable.com/embed/shrsymllFNXoNctlO?backgroundColor=cyan"
           sx={{
             background: "transparent",
             border: "1px solid #ccc",
