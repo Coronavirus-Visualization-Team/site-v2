@@ -72,7 +72,7 @@ const TeamPage = (props) => {
           </Text>
 
         <Grid
-          columns={[2, null, 4]}
+          columns={[2, 3, 4, 5]}
           sx={{
             justifyItems: ['center', 'unset']
           }}
@@ -96,8 +96,8 @@ const TeamPage = (props) => {
                   <Box
                     sx={{
                       position: 'relative',
-                      width: [128, 192],
-                      height: [128, 192],
+                      width: [100, 150],
+                      height: [100, 150],
                       borderRadius: '10px',
                       ":hover > #overlay": {
                         opacity: 1
@@ -109,8 +109,9 @@ const TeamPage = (props) => {
 
                   <Text
                     sx={{
-                      fontSize: [1, 2],
+                      fontSize: [1, 1],
                       fontWeight: '700',
+                      mt: '5px',
                       mb: '0rem',
                       color: 'white',
                       textAlign: 'center'
