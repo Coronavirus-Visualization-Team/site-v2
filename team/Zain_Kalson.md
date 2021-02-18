@@ -1,6 +1,6 @@
 ---
 name: Zain Kalson
-executive: true
+executive: false
 director: false
 lead: false
 community_manager: Fact Checking the EPA

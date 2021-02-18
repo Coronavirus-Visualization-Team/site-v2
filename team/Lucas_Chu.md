@@ -1,11 +1,11 @@
 ---
 name: Lucas Chu
-executive: true
+executive: false
 director: false
 lead: false
-community_manager: 
+community_manager:
 erevna: Executive Director (CEO)  
-position: Founder, CEO, Outreach
+position: Founder, Advisor
 project: Socioeconomic Factors, NYC Data
 image: /assets/lucas.jpg
 linkedin: "https://www.linkedin.com/in/chulucas/"

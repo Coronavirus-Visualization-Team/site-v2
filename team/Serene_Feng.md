@@ -1,12 +1,12 @@
 ---
 name: Serene Feng
-executive: false
+executive: true
 director: true
 lead: false
 community_manager:  
-erevna: First Vice-President 
-position: Public Relations
+erevna:
+position: External Affairs
 project:  
-image: ../assets/default_exec_image.png
+image: https://ca.slack-edge.com/T01BBM3QD5F-U01FFASMDCG-75da84329a1d-512
 linkedin: "https://www.linkedin.com/in/serene-feng/"
 ---

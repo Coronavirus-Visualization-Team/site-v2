@@ -1,12 +1,12 @@
 ---
 name: Laurel Prime
-executive: false
-director: false
+executive: true
+director: true
 lead: false
 community_manager:   
 erevna:  
-position:  
+position: Funding
 project: Advisory Board
-image: ../assets/default_exec_image.png
+image: https://ca.slack-edge.com/T01BBM3QD5F-U01FXDLFEHZ-aae031c73822-512
 linkedin: "https://www.linkedin.com/in/laurel-prime-622505131/"
 ---

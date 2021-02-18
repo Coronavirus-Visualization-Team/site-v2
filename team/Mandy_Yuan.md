@@ -1,6 +1,6 @@
 ---
 name: Mandy Yuan
-executive: true
+executive: false
 director: false
 lead: false
 community_manager:   

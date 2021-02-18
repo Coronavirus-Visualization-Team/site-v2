@@ -1,12 +1,12 @@
 ---
 name: Kelly Ly
-executive: true
-director: true
+executive: false
+director: false
 lead: false
 community_manager: 211 Project
 erevna:  
-position: Project Planning
+position: Advisor
 project:  
 image: ../assets/kelly.png
-linkedin: 
+linkedin:
 ---

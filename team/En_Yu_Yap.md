@@ -1,12 +1,12 @@
 ---
 name: En Yu Yap
-executive: false
-director: false
+executive: true
+director: true
 lead: false
 community_manager: Social Media
 erevna:  
-position: Social Media & Research
+position: Partnerships
 project:  
-image: ../assets/default_exec_image.png
+image: https://ca.slack-edge.com/T01BBM3QD5F-U01G95ES335-6e77575aa37a-512
 linkedin: "https://www.linkedin.com/in/en-yu-yap-ab522a1aa/"
 ---

@@ -7,7 +7,7 @@ community_manager: Development/Engineering
 erevna:  
 position: Development/Engineering
 project: Website, Superdashboard
-image: ../assets/calix.png
+image: https://www.calix.dev/img/people/calix.jpeg
 linkedin: "https://calix.dev"
 developer: true
 ---

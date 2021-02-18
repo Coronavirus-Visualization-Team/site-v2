@@ -1,9 +1,9 @@
 ---
 name: Luke Jianu
-executive: true
+executive: false
 director: false
 lead: false
-community_manager: 
+community_manager:
 erevna:   
 position: Executive Assistant
 project:  

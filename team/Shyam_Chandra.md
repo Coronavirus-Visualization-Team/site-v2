@@ -1,14 +1,13 @@
 ---
 name: Shyam Chandra
-executive: false
-director: false
+executive: true
+director: true
 lead: false
-community_manager: 
+community_manager:
 erevna:  
-pm: true
-erevna_team: Design
-position: 
-project: Social Media, Advisory Board, Genomic Surveillance
-image: ../assets/default_exec_image.png
+pm:
+position: External Affairs
+project:
+image: https://ca.slack-edge.com/T01BBM3QD5F-U01FBS56F1P-0ead1636136e-512
 linkedin: "https://www.linkedin.com/in/shyamchandra1/"
 ---

@@ -1,6 +1,6 @@
 ---
 name: Rodrigo Chaname
-executive: true
+executive: false
 director: false
 lead: false
 community_manager:   

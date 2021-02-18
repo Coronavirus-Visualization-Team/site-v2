@@ -1,14 +1,12 @@
 ---
 name: Ayan Longi
-executive: false
-director: false
+executive: true
+director: true
 lead: false
-community_manager: 
-erevna: 
-pm: true
-erevna_team: Project Planning/ Management 
-position:  
-project: CVT x Helpful Engineering
-image: ../assets/default_exec_image.png
+community_manager:
+erevna:
+position: Project Development
+project:
+image: https://ca.slack-edge.com/T01BBM3QD5F-U01EFQ7N4MQ-472cf7d92128-512
 linkedin: "https://www.linkedin.com/in/ayan-longi-0007b9137/"
 ---

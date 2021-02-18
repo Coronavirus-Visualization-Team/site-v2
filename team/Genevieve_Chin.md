@@ -1,7 +1,7 @@
 ---
 name: Genevieve Chin
-executive: true
-director: true
+executive: false
+director: false
 lead: false
 community_manager: Hospitality Industry
 erevna:  

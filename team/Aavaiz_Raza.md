@@ -1,11 +1,11 @@
 ---
-name: Zubair Akram
+name: Aavaiz Raza
 executive: true
 director: true
 lead: false
-community_manager: Recruiting
-erevna:
-position: Recruiting
+community_manager:
+erevna:   
+position: Marketing
 project:  
 image: ../assets/default_exec_image.png
 linkedin:
