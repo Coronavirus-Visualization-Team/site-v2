@@ -7,6 +7,6 @@ community_manager:
 erevna:    
 position: HR
 project:
-image: ../assets/default_exec_image.png
+image: ../assets/gabrielle.jpg
 linkedin: undefined
 ---
