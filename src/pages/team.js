@@ -68,7 +68,7 @@ const TeamPage = (props) => {
             color: 'white'
           }}
         >
-          Executive Directors
+          Core Leadership
           </Text>
 
         <Grid
