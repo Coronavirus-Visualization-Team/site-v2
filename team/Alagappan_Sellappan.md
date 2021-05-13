@@ -5,8 +5,8 @@ director: true
 lead: false
 community_manager:
 erevna:   
-position: Development
+position: Development/Engineering
 project:  
-image: ../assets/default_exec_image.png
+image: https://alagus04.github.io/alagappansellappancvt.png
 linkedin: https://www.linkedin.com/in/alagappan-sellappan/
 ---
