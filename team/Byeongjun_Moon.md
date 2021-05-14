@@ -1,11 +1,11 @@
 ---
 name: Byeongjun Moon
-executive: false
-director: false
+executive: true
+director: true
 lead: false
 community_manager: 
 erevna:  
-position: 
+position: Design
 project: Design, Hackathon Sponsorships
 image: ../assets/default_exec_image.png
 linkedin: "http://linkedin.com/in/bjmoonn"
