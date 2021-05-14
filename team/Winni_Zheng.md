@@ -1,7 +1,7 @@
 ---
 name: Winni Zheng
 executive: true
-director: false
+director: true
 lead: false
 community_manager:   
 erevna:
