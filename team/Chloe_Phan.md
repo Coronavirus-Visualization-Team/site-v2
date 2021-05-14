@@ -1,11 +1,11 @@
 ---
 name: Chloe Phan
-executive: false
-director: false
-lead: false
+executive: true
+director: true
+lead: true
 community_manager: 
 erevna:    
-position:  Design
+position: Design
 project: 
 image: ../assets/default_exec_image.png
 linkedin: 
