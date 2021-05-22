@@ -1,7 +1,7 @@
 ---
 name: Akhil Kumar
-executive: true
-director: true
+executive: false
+director: false
 lead: false
 community_manager: COVID South Korea
 erevna:  
