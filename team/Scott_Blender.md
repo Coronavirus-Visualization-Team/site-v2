@@ -5,6 +5,7 @@ director: false
 lead: false
 community_manager:  
 erevna: Executive Director (COO)
+advisor: true
 position: Advisor
 project: 211 Project
 image: /assets/scott.jpg
