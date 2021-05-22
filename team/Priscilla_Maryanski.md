@@ -1,7 +1,7 @@
 ---
 name: Priscilla Maryanski
 executive: false
-director: true
+director: false
 lead: false
 community_manager: Why is COVID spreading faster?
 erevna:
