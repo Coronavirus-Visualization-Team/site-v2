@@ -10,5 +10,5 @@ initiative:
 position: 
 project:
 image: ../assets/default_exec_image.png
-linkedin:
+linkedin: https://www.linkedin.com/in/justina-chua
 ---
