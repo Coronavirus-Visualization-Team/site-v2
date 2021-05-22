@@ -5,6 +5,7 @@ director: true
 lead: false
 community_manager: Social Media
 erevna:  
+advisor: true
 position: Partnerships
 project:  
 image: https://ca.slack-edge.com/T01BBM3QD5F-U01G95ES335-6e77575aa37a-512
