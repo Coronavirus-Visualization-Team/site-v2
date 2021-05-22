@@ -11,5 +11,5 @@ erevna_team: Design
 position:  Design
 project: Design, Advisory Board, GBV
 image: ../assets/default_exec_image.png
-linkedin:
+linkedin: https://www.linkedin.com/in/mandy-yuan7
 ---
