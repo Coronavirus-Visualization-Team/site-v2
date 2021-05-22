@@ -5,7 +5,8 @@ director: false
 lead: false
 community_manager:   
 erevna:  
-pm: true
+pm:
+advisor: true
 erevna_team: Design
 position:  Design
 project: Design, Advisory Board, GBV
