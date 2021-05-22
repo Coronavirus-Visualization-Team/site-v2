@@ -5,7 +5,7 @@ director: false
 lead: false
 community_manager: Recruiting
 erevna:
-position: Recruitment
+position: 
 project:  
 image: ../assets/default_exec_image.png
 linkedin:
