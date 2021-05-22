@@ -5,6 +5,7 @@ director: false
 lead: false
 community_manager:
 erevna:  
+advisor: true
 pm:
 position: External Affairs
 project:
