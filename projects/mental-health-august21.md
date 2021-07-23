@@ -1,11 +1,11 @@
 ---
 slug: mental-health
-title: Long Term Mental Hea
+title: Long Term Mental Health
 featured: true
 image: ../../img/longtermmentalhealth.jpeg
 label: Tint Tha Ra Wun + CVT
 link: https://scholar.harvard.edu/cvt/covid-long-haulers-mental-health-effects
-linkTitle: COVID & Climate Change Story Map
+linkTitle: COVID Long Term Mental Health Effects
 linkTarget: "_blank"
 templateKey: project
 ---
