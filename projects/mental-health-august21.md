@@ -5,7 +5,7 @@ featured: true
 image: ../../img/longtermmentalhealth.jpeg
 label: Tint Tha Ra Wun + CVT
 link: https://scholar.harvard.edu/cvt/covid-long-haulers-mental-health-effects
-linkTitle: COVID Long Haulers: Mental Health Effects Article
+linkTitle: COVID & Climate Change Story Map
 linkTarget: "_blank"
 templateKey: project
 ---
