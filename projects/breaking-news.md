@@ -1,7 +1,7 @@
 ---
 slug: breaking-news
 title: Breaking News 
-featured: true
+featured: false
 image: ../img/total-covid-cases-per-100k.png
 label: Neha Desaraju
 templateKey: project
