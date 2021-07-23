@@ -90,7 +90,7 @@ const Projects = ({ data }) => {
               width: "90%",
               mx: "auto",
               position: "relative",
-              mt: 4,
+              mt: 5,
               display: "flex",
               flexDirection: ["column", "row"]
             }}
