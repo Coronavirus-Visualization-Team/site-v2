@@ -4,7 +4,7 @@ title: COVID & Climate Change
 featured: false
 image: ../img/covid-climate.png
 label: Lily Geller
-link: https://arcg.is/4GbfG
+link: https://scholar.harvard.edu/cvt/covid-long-haulers-mental-health-effects
 linkTitle: COVID & Climate Change Story Map
 linkTarget: "_blank"
 templateKey: project
