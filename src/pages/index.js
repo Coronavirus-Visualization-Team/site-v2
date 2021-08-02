@@ -89,6 +89,22 @@ const IndexPage = () => {
             #WeAreInThisTogether.
           </Text>
           </Text>
+        <Button
+        as="a"
+        href="https://tiny.cc/CvT"
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{
+          fontSize: [14, 18],
+          px: 3,
+          bg: "#388df7",
+          borderRadius: "button",
+          boxShadow: "base",
+          flex: "1",
+          mt: 4
+        }}
+      >
+        Join Us
         </Box>
       </div>
     </Box>
