@@ -104,7 +104,7 @@ const IndexPage = () => {
               mt: 4
              }}
            >
-            Join Us
+            Applications Open! Apply Now!
           </Button>
 
         </Box>
