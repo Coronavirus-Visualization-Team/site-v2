@@ -89,7 +89,7 @@ const IndexPage = () => {
             #WeAreInThisTogether.
           </Text>
           </Text>
-        <Button
+  <Button
         as="a"
         href="https://tiny.cc/CvT"
         target="_blank"
@@ -105,6 +105,7 @@ const IndexPage = () => {
         }}
       >
         Join Us
+      </Button>
         </Box>
       </div>
     </Box>
