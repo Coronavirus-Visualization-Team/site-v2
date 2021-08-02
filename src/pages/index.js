@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { jsx, Text, Box, Image } from "theme-ui"
+import { Box, Button, Grid, Image, jsx, Text, useColorMode } from "theme-ui"
 import Background from '../components/Bitmap.png'
 import ReactGA from 'react-ga';
 
@@ -89,23 +90,24 @@ const IndexPage = () => {
             #WeAreInThisTogether.
           </Text>
           </Text>
-  <Button
-        as="a"
-        href="https://tiny.cc/CvT"
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{
-          fontSize: [14, 18],
-          px: 3,
-          bg: "#388df7",
-          borderRadius: "button",
-          boxShadow: "base",
-          flex: "1",
-          mt: 4
-        }}
-      >
-        Join Us
-      </Button>
+          <Button
+            as="a"
+            href="https://tiny.cc/CvT"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              fontSize: [14, 18],
+              px: 3,
+              bg: "#388df7",
+              borderRadius: "button",
+              boxShadow: "base",
+              flex: "1",
+              mt: 4
+             }}
+           >
+            Join Us
+          </Button>
+
         </Box>
       </div>
     </Box>
