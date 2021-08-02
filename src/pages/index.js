@@ -2,8 +2,7 @@
 import React, { useRef, useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import { jsx, Text, Box, Image } from "theme-ui"
-import { Box, Button, Grid, Image, jsx, Text, useColorMode } from "theme-ui"
+import { jsx, Text, Box, Image, Button } from "theme-ui"
 import Background from '../components/Bitmap.png'
 import ReactGA from 'react-ga';
 
