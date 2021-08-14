@@ -7,6 +7,6 @@ community_manager:
 erevna:
 position: Recruitment
 project:  
-image: ../assets/default_exec_image.png
+image: ../assets/aryannaik.jpg
 linkedin:
 ---
