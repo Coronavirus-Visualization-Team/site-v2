@@ -1,11 +1,11 @@
 ---
 name: Sadhana Kumar
-executive: false
-director: false
+executive: true
+director: true
 lead: false
 community_manager:   
 erevna:
-position:  
+position: Internal Affairs  
 project: Environmental Influences, Mutations
-image: ../assets/default_exec_image.png
+image: ../assets/sadhanakumar.png
 linkedin: "http://linkedin.com/in/sadhana--kumar"
