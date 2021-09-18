@@ -7,7 +7,7 @@ community_manager:
 erevna:   
 position: Development/Engineering
 project:  
-image: ../assets/alagappansellappan1.png
+image: ../assets/alagappan.png
 linkedin: https://www.linkedin.com/in/alagappan-sellappan/
 developer: true
 ---
