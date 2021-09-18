@@ -1,8 +1,8 @@
 ---
 name: Varshini Subhash
-executive: true
+executive: false
 director: false
-lead: true
+lead: false
 community_manager: Social Media
 erevna:
 position: Project Development
