@@ -7,7 +7,6 @@ community_manager:
 erevna:   
 position: Team Coordinator
 project:  
-image:
+image: ../assets/chuyinghuo.jpg
 linkedin:
-developer: true
 ---
