@@ -7,6 +7,6 @@ community_manager:
 erevna:   
 position: Project Development
 project: Project India
-image: ../aarushialoni.jpg
+image: ../assets/aarushialoni.jpg
 linkedin:
 ---
