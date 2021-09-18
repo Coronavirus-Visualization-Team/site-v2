@@ -1,7 +1,7 @@
 ---
 name: Aavaiz Raza
-executive: false
-director: false
+executive: true
+director: true
 lead: false
 community_manager:
 erevna:   
