@@ -1,6 +1,6 @@
 ---
 name: Ayan Longi
-executive: false
+executive: true
 director: false
 lead: false
 community_manager:
